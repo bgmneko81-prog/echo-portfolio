@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>PORTFOLIO | ECHO.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <nav class="site-nav" aria-label="メインナビゲーション">
+
+        <a href="index.html">HOME</a>
+
+        <a href="works.html" aria-current="page">WORKS</a>
+
+        <a href="projects.html">PROJECTS</a>
+
+        <a href="about.html">ABOUT</a>
+
+        <a href="contact.html">CONTACT</a>
+
+    </nav>
+
+    <!--　ECHO / PORTFOLIO　-->
+    <header class="works-hero echo-works-hero">
+
+        <p class="works-hero-label">
+            ECHO ARCHIVE / CREATIVE WORKS
+        </p>
+
+        <h1>PORTFOLIO<span>.</span></h1>
+
+        <p class="echo-works-catch">
+            次は、どの世界をのぞく？
+        </p>
+
+        <div class="echo-works-links">
+            <a href="#featured-works">
+                FEATURED WORKS ↓ 
+            </a>
+
+            <a href="#all-works">
+                ALL WORKS ↓ 
+            </a>
+        </div>
+        
+    </header>
+    
+
+    <main>
+
+        <!--　ECHO / GENRE SELECTOR　-->
+        <div class="echo-genre-filter"
+             role="group"
+             aria-label="作品ジャンル">
+            
+            <button type="button"
+                    class="echo-filter-btn is-active"
+                    data-genre="all"
+                    aria-pressed="true">
+                ALL
+            </button>
+
+            <button type="button"
+                    class="echo-filter-btn"
+                    data-genre="video"
+                    aria-pressed="false">
+                VIDEO
+            </button>
+
+            <button type="button"
+                    class="echo-filter-btn"
+                    data-genre="game"
+                    aria-pressed="false">
+                GAME
+            </button>
+
+            <button type="button"
+                    class="echo-filter-btn"
+                    data-genre="design"
+                    aria-pressed="false">
+                DESIGN
+            </button>
+
+        </div>
+
+        <p class="echo-filter-status"
+           id="echo-filter-status"
+           aria-live="polite"></p>
+
+        <section id="works">
+
+            <!--　注目作品　-->
+            <div class="works-section-heading" id="featured-works">
+            
+                <p class="works-section-label">
+                    01 / SELECTED WORKS
+                </p>
+
+                <h2>FEATURED WORKS</h2>
+
+                <p class="works-section-description">
+                    企画・構成・映像表現にこだわった主な制作作品。
+                </p>
+
+            </div>
+
+            <!--　作品一覧の開始　-->
+            <div class="works-grid">
+
+            <article class="work-card" data-echo-genre="video">
+               
+                <a class="work-link" href="link-one.html">
+                    
+                <div class="work-frame">
+                    <img
+                        class="work-art"
+                        src="LINK ONE サムネ.jpg"
+                        alt="有線イヤホンLINK ONEのCMサムネイル"
+                    >
+                </div>
+
+                <p class="work-category">TRACK 01</p>
+                <h3>LINK ONE</h3>
+                <p>製品CM / 企画・映像作品</p>
+
+                </a>
+            </article>
+
+            <!--- TRACK 02 :RE:CODE -->
+            <article class="work-card" data-echo-genre="game">
+
+                <a class="work-link" href="record.html">
+
+
+                    <div class="work-frame">
+                    
+                        <img
+                            class="work-art"
+                            src="record-thumb.jpg"
+                            alt="夜の町を背景にしたRE：CORDのゲームPVサムネイル"
+                            >
+
+                    </div>
+
+                    <p class="work-category">TRACK 02 / GAME PV</p>
+
+                    <h3>RE:CORD</h3>
+
+                    <p>自主制作ゲームPV / 企画・映像作品</p>
+
+                </a>
+
+            </article>
+
+            </div>
+
+            <!-- ALL　WORKS　-->
+            <section id="all-works" class="all-works">
+
+                <p class="works-section-label">
+                    02 / ALL WORKS
+                </p>
+
+                <h2>Other Creative Works</h2>
+
+                <p class="works-section-description">
+                    ゲーム・映像・グラフィック・Webなどの制作作品。
+                </p>
+
+                <!-- ゲーム -->
+                 <h3 class="all-works-category">
+                    GAME
+                 </h3>
+
+                 <div class="mini-works-grid">
+
+                    <!-- 全員そろっていますか！？ -->
+                     <article class="mini-work-card" data-echo-genre="game">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="all-here-detail"
+                        >
+
+                            <div class="mini-work-frame all-here-cover">
+
+                                <span>ORIGINAL GAME</span>
+
+                                <strong>
+                                    全員<br>
+                                    そろっていますか！？
+                                </strong>
+
+                            </div>
+
+                            <h4>全員そろっていますか！？</h4>
+
+                        </button>
+
+                        <p class="work-ai-note">
+                            見下ろし型・校外学習引率ゲーム / 自主企画<br>
+                            ※ゲーム画面イラストには生成AIを使用しています。
+                        </p>
+
+                    </article>
+
+                    <!-- ROUND SHIFT -->
+                    <article class="mini-work-card" data-echo-genre="game">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="round-shift-detail"
+                        >
+
+                            <div class="mini-work-frame round-shift-cover">
+                            
+                                <span>ORIGINAL GAME</span>
+
+                                <strong>
+                                    ROUND<br>
+                                    SHIFT
+                                </strong>
+
+                            </div>
+
+                            <h4>ROUND SHIFT ｜ チーム対戦FPS企画</h4>
+
+                        </button>    
+
+                        <p class="work-ai-note">
+                            4vs4・ラウンド制戦術FPS / 自主企画<br>
+                            ※ゲーム画面イラストには生成AIを使用しています。
+                        </p>
+
+                    </article>
+
+                    <!-- NOISE PATROL -->
+                     <article class="mini-work-card" data-echo-genre="game">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="noise-patrol-detail"
+                        >
+
+                            <div class="mini-work-frame noise-patrol-cover">
+                                <span>ORIGINAL GAME</span>
+                                <strong>NOISE<br>PATROL</strong>
+                            </div>
+
+                            <h4>NOISE PATROL ｜ スマホゲーム企画</h4>
+
+                        </button>
+
+                        <p class="work-ai-note">
+                            コミカル取締シューティング / 自主企画<br>
+                            ※ゲーム画面イラストには生成AIを使用しています。
+                        </p>
+
+                    </article>
+
+                    <!-- BLACK SORT -->
+                    <article class="mini-work-card" data-echo-genre="game">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="black-sort-detail"
+                        >
+
+                            <div class="mini-work-frame black-sort-cover">
+                            
+                                <span>ORIGINAL GAME</span>
+
+                                <strong>
+                                    BLACK<br>
+                                    SORT
+                                </strong>
+
+                            </div>
+
+                        <h4>BLACK SORT ｜ 倉庫仕分けゲーム企画</h4>
+
+                        </button>
+
+                        <p class="work-ai-note">
+                            一人称視点・倉庫仕分けシミュレーション / 自主企画<br>
+                            ※ゲーム画面イラストには生成AIを使用しています。
+                        </p>
+
+                    </article>
+
+                 </div>
+
+
+                <!--　映像　-->
+                <h3 class="all-works-category">
+                    VIDEO WORKS
+                </h3>
+
+                <!--　長尺映像　-->
+                <p class="works-section-label">
+                    01 / LONG FORM
+                </p>
+
+                <div class="mini-works-grid">
+
+                    <!--　ハワイ家族向けの旅行PR　-->
+                    <article class="mini-work-card" data-echo-genre="video">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="hawaii-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                     class="mini-work-art"
+                                     src="hawaii-thumb.png"
+                                     alt="ハワイ家族向けの旅行PR映像のサムネイル"
+                                     loading="lazy"
+                                >
+                            </div>
+
+                            <h4>ハワイ家族向けの旅行PR</h4>
+                        </button>
+
+                    </article>
+
+                </div>
+
+                <!--　短尺・縦型映像　-->
+                <p class="works-section-label">
+                    02 / SHORT FORM
+                </p>
+
+                <div class="mini-works-grid short-works-grid">
+
+                    <!--　サマーメニュー紹介動画　-->
+                    <article class="mini-work-card" data-echo-genre="video">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="summer-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                    class="mini-work-art"
+                                    src="summer-menu-thumb.png"
+                                    alt="サマーメニュー紹介動画のサムネイル"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <h4>サマーメニュー動画</h4>
+
+                        </button>
+
+                    </article>
+
+                
+                    <article class="mini-work-card" data-echo-genre="video">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="tokyo-01-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                    class="mini-work-art"
+                                    src="tokyo-01-thumb.png"
+                                    alt="浅草を題材にした東京映像01のサムネイル"
+                                    loading="lazy"
+                                >
+
+                            </div>
+
+                            <h4>東京紹介 01</h4>
+
+                        </button>
+
+                    </article>
+
+
+                    <article class="mini-work-card" data-echo-genre="video">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="tokyo-02-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                    class="mini-work-art"
+                                    src="tokyo-02-thumb.png"
+                                    alt="東京駅からの一日を紹介するVlogっぽい東京紹介02のサムネイル"
+                                    loading="lazy"
+                                >
+
+                            </div>
+
+                            <h4>東京紹介 02</h4>
+
+                        </button>
+                        
+                    </article>
+
+                </div>
+
+                <!--　グラフィック作品　-->
+                <h3 class="all-works-category">
+                    GRAPHIC DESIGN
+                </h3>
+
+                <div class="mini-works-grid">
+
+                    <!--　Beautiful　Flowerロゴデザイン　-->
+                    <article class="mini-work-card" data-echo-genre="design">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="beautiful-flower-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                    class="mini-work-art"
+                                    src="company-logos-thumb.png"
+                                    alt="Beautiful Flowerのロゴと花のビジュアル展開"
+                                   loading="lazy"
+                                >
+
+                            </div>
+
+                            <h4>Beautiful Flower ｜ ロゴデザイン</h4>
+
+                        </button>
+
+                        <p class="work-ai-note">
+                            ※背景の花のイラストには生成AIを使用しています。
+                        </p>
+
+                    </article>
+
+                    <!--　SAVE　POINT　オープンポスター　-->
+                    <article class="mini-work-card" data-echo-genre="design">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="save-point-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                    class="mini-work-art"
+                                    src="open-posters-thumb.jpg"
+                                    alt="SAVE POINTの新店舗オープン告知とメニュー紹介ポスター"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <h4>SAVE POINT ｜ ポスターデザイン（表 / 裏）</h4>
+
+                        </button>
+
+                        <p class="work-ai-note">
+                            ※キャラクターイラストには生成AIを使用しています。
+                        </p>
+
+                    </article>
+
+                    <!--　モーニングメニューデザイン　-->
+                    <article class="mini-work-card" data-echo-genre="design">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="morning-menu-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                    class="mini-work-art"
+                                    src="morning-menu-thumb.jpg"
+                                    alt="モーニングメニュー3作品のデザイン"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <h4>モーニングメニュー ｜ デザイン3作品</h4>
+
+                        </button>
+
+                    </article>
+
+                </div>
+
+                <!--　バナー作品　-->
+                <h3 class="all-works-category">
+                    BANNER DESIGN
+                </h3>
+
+                <div class="mini-works-grid">
+
+                    <!--　セールスバナー4作品　-->
+                    <article class="mini-work-card" data-echo-genre="design">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="sale-banners-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                    class="mini-work-art"
+                                    src="sale-banners-thumb.jpg"
+                                    alt="セールスバナー4作品をまとめたデザイン"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <h4>セールバナー ｜ デザイン4作品</h4>
+                    
+                        </button>
+
+                    </article>
+
+                    <!--　グループ企業バナー　-->
+                    <article class="mini-work-card" data-echo-genre="design">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="corporate-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                    class="mini-work-art"
+                                    src="corporate-series-thumb.png"
+                                    alt="FRAMEグループの企業バナー4作品をまとめた画像"
+                                    loading="lazy"
+                                >
+                            </div>
+   
+                            <h4>グループ企業 バナーシリーズ(4作品)</h4>
+
+                        </button>
+
+                    </article>
+
+                </div>
+
+                <!--　イラスト・素材　-->
+                <h3 class="all-works-category">
+                    ILLUSTRATION ＆ ASSETS
+                </h3>
+
+                <div class="mini-works-grid">
+                    
+                    <!--　アイコンセット　-->
+                    <article class="mini-work-card" data-echo-genre="design">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="icon-set-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                    class="mini-work-art"
+                                    src="icon-set-thumb.jpg"
+                                    alt="制作したアイコンセットのデザイン一覧"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <h4>アイコンセット ｜ デザイン作品</h4>
+
+                        </button>
+
+                    </article>
+
+                    <!--　オリジナルキャラクター：杉樽くん　-->
+                    <article class="mini-work-card" data-echo-genre="design">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="sugitaru-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                    class="mini-work-art"
+                                    src="sugitaru-thumb.jpg"
+                                    alt="オリジナルキャラクター杉樽くんのデザイン"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <h4>杉樽くん ｜ キャラクターデザイン</h4>
+
+                        </button>
+
+                    </article>
+                
+                </div>
+
+                <!--　Web・その他　-->
+                <h3 class="all-works-category">
+                    WEB ＆ OTHER
+                </h3>
+
+                <div class="mini-works-grid">
+
+                    <!--　MIXTURE　DAYS　-->
+                    <article class="mini-work-card" data-echo-genre="design">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="mixture-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                    class="mini-work-art mixture-thumb"
+                                    src="LP1.jpg"
+                                    alt="MIXTURE DAYS 音楽フェスLPのメインビジュアル"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <h4>MIXTURE DAYS ｜ 音楽フェスLP</h4>
+
+                        </button>
+
+                        <p class="work-ai-note">
+                            ※一部のイラストには生成AIを使用しています。
+                        </p>
+
+                    </article>
+
+                    <!--　京セラドーム大阪　周辺地図　-->
+                    <article class="mini-work-card" data-echo-genre="design">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="map-design-detail"
+                        >
+
+                            <div class="mini-work-frame">
+                                <img
+                                    class="mini-work-art"
+                                    src="map-design-thumb.jpg"
+                                    alt="京セラドーム大阪周辺の駅・鉄道・河川を整理した地図デザイン"
+                                    loading="lazy"
+                                >
+                            </div>
+
+                            <h4>京セラドーム大阪 ｜ 周辺地図デザイン</h4>
+
+                        </button>
+                        
+                    </article>
+
+                </div>
+
+            </section>
+        
+            <!--　作品一覧の終了　-->
+            
+        </section>
+
+        <!--　東京紹介01　／　詳細ポップアップ　-->
+        <div id="tokyo-01-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="tokyo-01-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                VIDEO / CITY PROMOTION
+            </p>
+
+            <h2>東京紹介 01</h2>
+
+            <h3>CONCEPT</h3>
+            <p>
+                夜の浅草を題材に、街紹介PV。
+                雷門から浅草寺、五重塔へ展開し、
+                夜の街並みの雰囲気を伝える作品。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                BGMのリズムに合わせたカットの切り替えや
+                速度調整を行い、映像に流れをつけた。
+                また、色調整によって夜景の雰囲気を整え、
+                一つの映像として統一感が出るように工夫した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                構成・映像編集・色調整を担当。
+            </p>
+
+            <a
+                href="https://youtube.com/shorts/kppTwLGC1VU?si=J26Mfs_HaYQPzHIz"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="work-popover-link"
+            >
+                VIDEOを見る ↗
+            </a>
+
+        </div>
+
+        <!--　東京紹介　/　詳細ポップアップ　-->
+        <div id="tokyo-02-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="tokyo-02-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                VIDEO / VLOG
+            </p>
+
+            <h2>東京紹介 02</h2>
+
+            <h3>CONCEPT</h3>
+            <p>
+                東京駅から始める一日を題材に、
+                街の様子をVlog風にまとめた映像作品。
+                観光地そのものだけでなく、
+                街を歩く体験や空気感を伝えることを
+                目指した。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                一日の流れが自然に伝わるように、
+                場面の順番や映像の切り替えを意識。
+                視聴者が一緒に街を巡っているように
+                感じられる構成を目指した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                東京を題材にした映像作品。
+                構成・映像編集を中心に制作。
+            </p>
+
+            <a
+                href="https://youtube.com/shorts/kLTLBJeB1yI?si=IDDWR3AAkz2tfWyX"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="work-popover-link"
+            >
+                VIDEOを見る ↗
+            </a>
+
+        </div>
+
+        <!--　Beautiful Flower / 詳細ポップアップ　-->
+        <div id="beautiful-flower-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="beautiful-flower-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                GRAPHIC DESIGN / LOGO
+            </p>
+
+            <h2>Beautiful Flower</h2>
+
+            <img
+                class="work-detail-preview"
+                src="company-logos-thumb.png"
+                alt="Beautiful Flowerのロゴデザイン"
+                loading="lazy"
+            >
+
+            <h3>CONCEPT</h3>
+            <p>
+                「Beautiful Flower」をテーマに制作した
+                ロゴデザイン作品。
+
+                ロゴ単体だけでなく、背景と組み合わせた
+                ビジュアル展開まで制作した。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                ロゴと背景の花のイラストを組み合わせ、
+                画面全体の統一感を意識した。
+
+                ロゴの見せ方やビジュアルとのバランスを
+                考えながらデザインした。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                ロゴデザイン・ビジュアル構成を制作。
+                背景の花のイラストには生成AIを使用。
+            </p>
+
+        </div>
+
+        <!--　SAVE POINT / 詳細ポップアップ　-->
+        <div id="save-point-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="save-point-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                GRAPHIC DESIGN / POSTER
+            </p>
+
+            <h2>SAVE POINT</h2>
+
+            <img
+                class="work-detail-preview"
+                src="open-posters-thumb.jpg"
+                alt="SAVE POINTのポスターデザイン表面・裏面"
+                loading="lazy"
+            >
+
+            <h3>CONCEPT</h3>
+            <p>
+                架空の店舗「SAVE POINT」の
+                新店舗オープン告知と、メニュー紹介を目的とした
+                ポスターデザイン。
+
+                表面と裏面を使い、店舗の情報と
+                商品の魅力を伝える構成にした。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                新店舗のオープン情報とメニュー紹介を
+                それぞれ分かりやすく伝えるため、
+                掲載する情報やレイアウトを整理した。
+
+                2つの面を通して、
+                ひとつの店舗として統一感のある
+                ビジュアルを目指した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                ポスターの情報構成・レイアウト・
+                グラフィックデザインを制作。
+
+                キャラクターイラストには生成AIを使用。
+            </p>
+
+        </div>
+
+        <!-- モーニングメニュー　/　詳細ポップアップ -->
+        <div id="morning-menu-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="morning-menu-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                GRAPHIC DESIGN / MENU
+            </p>
+
+            <h2>モーニングメニュー</h2>
+
+            <img
+                class="work-detail-preview"
+                src="morning-menu-thumb.jpg"
+                alt="モーニングメニューのデザイン3作品"
+                loading="lazy"
+            >
+
+            <h3>CONCEPT</h3>
+            <p>
+                モーニングメニューをテーマに制作した
+                3種類のグラフィックデザイン。
+
+                メニューの内容が伝わりやすく、
+                食事の魅力を感じられるデザインを目指した。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                メニュー名や写真、説明文などの情報を整理し、
+                読みやすさとビジュアルのバランスを意識した。
+
+                3種類のデザインを通して、
+                情報の見せ方やレイアウトを検討した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                モーニングメニュー3作品の
+                情報構成・レイアウト・
+                グラフィックデザインを制作。
+            </p>
+
+        </div>
+
+        <!-- セールバナー　/　詳細ポップアップ　-->
+        <div id="sale-banners-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="sale-banners-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                GRAPHIC DESIGN / ADVERTISING
+            </p>
+
+            <h2>セールバナー ｜ デザイン4作品</h2>
+
+            <img
+                class="work-detail-preview"
+                src="sale-banners-thumb.jpg"
+                alt="4種類のセールバナーデザイン"
+                loading="lazy"
+            >
+
+            <h3>CONCEPT</h3>
+            <p>
+                セール情報を伝えることをテーマに制作した、
+                4種類のバナーデザイン。
+                限られたスペースの中で、
+                キャンペーンの魅力を
+                分かりやすく伝えることを目指した。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                見出しの大きさや文字の配置、
+                画像とのバランスを意識したデザイン。
+                伝えたい情報の優先順位を考え、
+                視線の流れや読みやすさを重視した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                セールスバナー4作品の
+                レイアウト・グラフィックデザイン。
+            </p>
+
+        </div>
+
+        <!--　アイコンセット　/　詳細ポップアップ　-->
+        <div id="icon-set-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="icon-set-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                GRAPHIC DESIGN / ICON
+            </p>
+
+            <h2>アイコンセット</h2>
+
+            <img
+                class="work-detail-preview"
+                src="icon-set-thumb.jpg"
+                alt="アイコンセットのデザイン一覧"
+                loading="lazy"
+            >
+
+            <h3>CONCEPT</h3>
+            <p>
+                複数のアイコンを制作した
+                グラフィックデザイン作品。
+                形や色、情報の伝わり方を考える
+                デザインの練習として制作した。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                小さなサイズでも内容が伝わるように、
+                シンプルな形と視認性を意識。
+                アイコン同士の見た目の統一感にも
+                配慮した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                アイコンの形状・配色・
+                グラフィックデザインを制作。
+            </p>
+
+        </div>
+
+        <!--　杉樽くん　/　詳細ポップアップ　-->
+        <div id="sugitaru-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="sugitaru-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                GRAPHIC DESIGN / CHARACTER
+            </p>
+
+            <h2>杉樽くん</h2>
+
+            <img
+                class="work-detail-preview"
+                src="sugitaru-thumb.jpg"
+                alt="オリジナルキャラクター 杉樽くん"
+                loading="lazy"
+            >
+
+            <h3>CONCEPT</h3>
+            <p>
+                オリジナルキャラクター「杉樽くん」の
+                デザイン作品。
+                キャラクターとして個性を
+                視覚的に表現することをテーマに制作した。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                キャラクターの特徴が伝わるように、
+                シルエットや表情、全体のバランスを
+                意識したデザインを検討した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                オリジナルキャラクターの
+                ビジュアルデザインを制作。
+            </p>
+
+        </div>
+
+        <!--　京セラドーム大阪　/　詳細ポップアップ　-->
+        <div id="map-design-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="map-design-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                GRAPHIC DESIGN / INFORMATION DESIGN
+            </p>
+
+            <h2>京セラドーム大阪 ｜ 周辺地図</h2>
+
+            <img
+                class="work-detail-preview"
+                src="map-design-thumb.jpg"
+                alt="京セラドーム大阪の周辺地図デザイン"
+                loading="lazy"
+            >
+
+            <h3>CONCEPT</h3>
+            <p>
+                京セラドーム大阪周辺を題材に、
+                駅・鉄道・河川などの情報を整理した
+                周辺地図デザイン。
+
+                目的地と周辺施設の位置関係が
+                分かりやすく伝わる地図を目指した。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                地図に必要な情報を整理し、
+                それぞれの位置関係が伝わるように
+                レイアウトを構成した。
+
+                視認性と情報の優先順位を意識し、
+                見る人が必要な情報を見つけやすい
+                デザインを検討した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                京セラドーム大阪周辺の
+                地図デザインを制作。
+
+                情報整理・レイアウト・
+                グラフィックデザインを制作。
+            </p>
+
+        </div>
+
+        <!--　ハワイPR　詳細ポップアップ　-->
+        <div id="hawaii-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="hawaii-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                VIDEO / TRAVEL PR
+            </p>
+
+            <h2>ハワイ家族向け旅行PR</h2>
+
+            <h3>CONCEPT</h3>
+            <p>
+                家族旅行を検討している人に向けた
+                ハワイの旅行PR映像。
+
+                子どもが「行ってみたい」と感じ、
+                保護者も旅行の魅力をイメージできる
+                映像を目指した。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                ゲームの選択画面をイメージしたUI演出を取り入れ、
+                視聴者が次の展開を楽しめる構成にした。
+
+                海・山・食べ物・生き物など、
+                ハワイのさまざまな魅力を紹介し、
+                最後は夕日の映像で締めくくった。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                企画・構成・映像編集・UI演出を担当。
+            </p>
+
+            <a
+               href="https://youtu.be/41wN_TjLy8I?si=puAwqyQNpn3aoiSh"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="work-popover-link"
+            >
+
+               VIDEOを見る ↗ 
+            </a>
+
+        </div>
+
+        <!--　グループ企業バナー　-->
+        <div id="corporate-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="corporate-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                GRAPHIC DESIGN / CORPORATE SERIES
+            </p>
+
+            <h2>グループ企業 バナーシリーズ</h2>
+
+           <img
+               class="work-detail-preview"
+               src="corporate-series-thumb.png"
+               alt="FRAMEグループの4種類のバナーデザイン"
+               loading="lazy"
+            >
+
+            <h3>CONCEPT</h3>
+            <p>
+                架空の企業グループ「FRAME」を設定し、
+                4つの事業に合わせたバナーを制作した
+                企業バナーデザイン。
+
+                映像作品・Webデザイン・SNS広告・音楽制作の
+                異なる事業を、ひとつのグループとして展開した。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                それぞれの事業内容が伝わるように、
+                バナーごとに扱う情報やビジュアルを構成。
+
+                4つの事業をひとつのシリーズとして
+                見せることを意識した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                架空企業の設定・情報構成・
+                バナー4作品のグラフィックデザインを制作。
+            </p>
+
+            
+
+        </div>
+
+        <!--　サマーメニュー動画　詳細ポップアップ　-->
+        <div id="summer-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="summer-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                VIDEO / SHORT MOVIE
+            </p>
+
+            <h2>サマーメニュー動画</h2>
+
+            <h3>CONCEPT</h3>
+            <p>
+                夏のメニューを紹介することを目的とした
+                短尺のプロモーション映像。
+
+                季節感を取り入れながら、
+                メニューの魅力を伝える作品。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                夏らしさが伝わるビジュアルを取り入れ、
+                短い映像の中でメニューの情報を
+                見やすく伝えることを意識した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                サマーメニュー紹介動画の
+                映像編集・ビジュアル構成を制作。
+            </p>
+
+            <a
+                href="https://youtube.com/shorts/OvAswn6VDEY?si=0hrBEAgl4cTq3-uU"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="work-popover-link"
+            >
+                VIDEOを見る ↗
+            </a>
+
+        </div>
+
+        <!--　MIXTURE　DAYS　詳細ポップアップ　-->
+        <div id="mixture-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="mixture-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                WEB DESIGN / EVENT PLANNING
+            </p>
+
+            <h2>MIXTURE DAYS</h2>
+
+            <h3>CONCEPT</h3>
+            <p>
+                「音楽との新しい出会い」をテーマに企画した、
+                VRChat上で開催する架空の音楽フェスのLP。
+                ジャンルの異なる音楽と人が交わる体験を表現した。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                ロック・ボカロ・DJ・アイドルの4ジャンルを
+                異なる惑星に見立て、イベントの世界観を構築。
+                また、VRchat初心者でも参加できるように、
+                イベント紹介から参加方法までの導線を設計した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                架空イベントの企画、LPの情報設計、
+                ビジュアルデザインを制作。
+                一部イラストには生成AIを使用。
+            </p>
+
+            <details class="lp-preview">
+
+                <summary>LPのデザイン全体を見る ↓ </summary>
+
+                <p class="lp-preview-note">
+                    下へスクロールしてデザインをご覧いただけます。
+                    画像をクリックすると拡大もできます。
+                </p>
+
+                <div class="lp-image-gallery">
+
+                    <a href="LP1.jpg" target="_blank" rel="noopener">
+                        <img src="LP1.jpg" alt="LPのメインビジュアル"
+                             width="1535" height="2048" loading="lazy">
+                    </a>
+
+                    <a href="LP3.jpg" target="_blank" rel="noopener">
+                        <img src="LP3.jpg" alt="LPのコンセプト紹介"
+                             width="2048" height="1642" loading="lazy">
+                    </a>
+
+                    <a href="LP4.jpg" target="_blank" rel="noopener">
+                        <img src="LP4.jpg" alt="アーティスト紹介前半"
+                             width="1535" height="2048" loading="lazy">
+                    </a>
+
+                    <a href="LP5.jpg" target="_blank" rel="noopener">
+                        <img src="LP5.jpg" alt="アーティスト紹介後半"
+                             width="1535" height="2048" loading="lazy">
+                    </a>
+
+                    <a href="LP6.jpg" target="_blank" rel="noopener">
+                        <img src="LP6.jpg" alt="VRChat参加方法"
+                             width="2048" height="818" loading="lazy">
+                    </a>
+
+                    <a href="LP8.jpg" target="_blank" rel="noopener">
+                        <img src="LP8.jpg" alt="イベントグッズ紹介"
+                             width="2048" height="1742" loading="lazy">
+                    </a>
+
+                </div>
+
+            </details>
+
+
+        </div>
+
+        <!-- NOISE PATROL / 詳細ポップアップ -->
+         <div id="noise-patrol-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="noise-patrol-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                GAME / ORIGINAL GAME CONCEPT
+            </p>
+
+            <h2>NOISE PATROL</h2>
+            
+            <img
+                class="work-detail-preview"
+                src="noise-patrol-illustrarion.png"
+                alt="NOISE PATROLのゲームイメージイラスト"
+                loading="lazy"
+            >
+
+            <p class="work-ai-note">
+                ※掲載画像はゲームの企画イメージです。
+                イラストには生成AIを使用しています。
+                実際に動作するゲームの画面ではありません。
+            </p>
+
+            <h3>CONCEPT</h3>
+            <p>
+                騒音をまき散らす車両を取り締まる、
+                スマートフォン向けのコミカルシューティングゲーム企画。
+                直観的な操作と爽快感を重視した作品。
+            </p>
+
+            <h3>HOW TO PLAY</h3>
+            <p>
+                目の前に現れる騒音車両を狙って制圧する。
+                リロード中は攻撃できないため、
+                狙うタイミングを考えることが重要になる。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                シンプルな操作で楽しめるゲーム性と、
+                リロードによる判断要素を組み合わせた。
+                コミカルな世界観とテンポの良い体験を意識した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                オリジナルゲームの企画・コンセプト設計。
+                スマートフォン向けゲームとして構想。
+            </p>
+
+        </div>
+
+        <!-- 全員そろっていますか！？ -->
+         <div id="all-here-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="all-here-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                GAME / ORIGINAL GAME CONCEPT
+            </p>
+
+            <h2>全員そろっていますか！？</h2>
+
+            <img
+                class="work-detail-preview"
+                src="all-here-illustration.png"
+                alt="全員そろっていますか！？のゲームイメージイラスト"
+                loading="lazy"
+            >
+
+            <p class="work-ai-note">
+                ※掲載画像はゲームの企画イメージです。
+                イラストには生成AIを使用しています。
+                実際に動作するゲームの画面ではありません。
+            </p>
+
+            <h3>CONCEPT</h3>
+            <p>
+                校外学習の最後尾を担当する先生となり、
+                児童全員を目的地まで引率する
+                見下ろし型のゲーム企画。
+                自由気ままな児童たちを見守りながら、
+                全員そろっての到着を目指す作品。
+            </p>
+
+            <h3>HOW TO PLAY</h3>
+            <p>
+                プレイヤーは列の最後尾から児童たちを見守り、
+                声をかけたり、乱れた列を整えたりしながら進む。
+                児童の学年によって難易度が変化し、
+                低学年ほど引率が難しくなる。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                次々と起こる列の乱れに対して、
+                どの児童を優先して注意するかを考える
+                ドタバタ感をゲームの面白さにした。
+                また、学級委員長によるお助け効果を設け、
+                列の乱れを軽減できる仕組みも考案した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                オリジナルゲームの企画・コンセプト設計。
+                基本ルール、難易度の変化、
+                お助けシステムなどを構想。
+            </p>
+
+        </div>
+
+        <!-- BLACK SORT / 詳細ポップアップ -->
+        <div id="black-sort-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="black-sort-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+             <p class="work-popover-label">
+                GAME / ORIGINAL GAME CONCEPT
+            </p>
+
+            <h2>BLACK SORT</h2>
+
+            <img
+                class="work-detail-preview"
+                src="black-sort-illustration.png"
+                alt="BLACK SORTのゲーム画面イメージ"
+                loading="lazy"
+            >
+
+            <p class="work-ai-note">
+                ※掲載画像はゲームの企画イメージです。
+                イラストには生成AIを使用しています。
+                実際に動作するゲームの画面ではありません。
+            </p>
+
+            <h3>CONCEPT</h3>
+            <p>
+                多額の借金を抱えた主人公が、
+                巨大物流倉庫で働きながら返済を目指す、
+                PC向けの一人称視点シミュレーションゲーム企画。
+                正規の仕事を続けるか、
+                不正による高収入を狙うか。
+                プレイヤーの判断が運命を左右する。
+            </p>
+
+            <h3>HOW TO PLAY</h3>
+            <p>
+                ベルトコンベヤーで流れてくる荷物を確認し、
+                配送先に応じて正しいレーンへ仕分けていく。
+                荷物を開封して中身を転売することもできるが、
+                不正が発覚するとゲームオーバー。
+                残り日数と収入を管理しながら、
+                期限内の借金完済を目指す。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                正規の仕分け作業でも借金返済を達成できる一方、
+                不正を行えば短期間で大きな収入を得られる。
+                しかし、発覚すればすべてを失う。
+                日常的な倉庫作業にリスクと誘惑を組み込み、
+                プレイヤー自身の選択が緊張感を生む
+                ゲーム体験を目指した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                オリジナルゲームの企画・コンセプト設計。
+                仕分け作業、荷物の開封判断、
+                借金返済システムなどを構想。
+            </p>
+
+        </div>
+
+        <!-- ROUND SHIFT / 詳細ポップアップ -->
+        <div id="round-shift-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="round-shift-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                GAME / ORIGINAL GAME CONCEPT
+            </p>
+
+            <h2>ROUND SHIFT</h2>
+
+            <img
+                class="work-detail-preview"
+                src="round-shift-illustration.png"
+                alt="ROUND SHIFTのゲーム画面イメージ"
+                loading="lazy"
+            >
+
+            <p class="work-ai-note">
+                ※掲載画像はゲームの企画イメージです。
+                イラストには生成AIを使用しています。
+                実際に動作するゲームの画面ではありません。
+            </p>
+
+            <h3>CONCEPT</h3>
+            <p>
+                「強い一人より、強い組み合わせ。」をテーマにした、
+                4vs4のラウンド制戦術FPSゲーム企画。
+                個人の撃ち合いだけでなく、
+                チームの役割分担と編成によって
+                勝利を目指す対戦ゲーム。
+            </p>
+
+            <h3>HOW TO PLAY</h3>
+            <p>
+                7種類のロールから4人のチームを編成し、
+                相手チームとラウンド制で対戦する。
+                ラウンドごとに編成を変更できるため、
+                相手の戦術や戦場の状況に合わせて
+                チームの戦い方を組み替えていく。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                妨害・職人・情報・一発逆転など、
+                特徴の異なるロールの組み合わせを重視した。
+                また、前のラウンドで起きた戦場の変化が
+                次のラウンドにも残る仕組みを取り入れ、
+                ラウンドを重ねることで戦術が変化する
+                ゲーム体験を目指した。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                オリジナルゲームの企画・コンセプト設計。
+                ロール構成、チーム編成の変更、
+                ラウンド間で継続する戦場変化などを構想。
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 ECHO.</p>
+    </footer>
+
+<script>
+(() => {
+    const buttons = document.querySelectorAll(
+        ".echo-filter-btn"
+    );
+
+    const cards = document.querySelectorAll(
+        ".works-grid .work-card, .mini-works-grid .mini-work-card"
+    );
+
+    const status = document.getElementById(
+        "echo-filter-status"
+    );
+
+    function updateHeadings(){
+        const featuredHeading = document.getElementById("featured-works");
+        const featureGrid = document.querySelector(".works-grid");
+        const allWorks = document.getElementById("all-works");
+
+        const hasFeatured = !!featureGrid.querySelector(
+            ".work-card:not([hidden])"
+        );
+
+        featuredHeading.hidden = !hasFeatured;
+        featureGrid.hidden = !hasFeatured;
+
+        const grids = [
+            ...allWorks.querySelectorAll(".mini-works-grid")
+        ];
+
+        grids.forEach(grid =>{
+            const hasWork = !!grid.querySelector(
+                ".mini-work-card:not([hidden])"
+            );
+
+            grid.hidden = !hasWork;
+
+            const previous = grid.previousElementSibling;
+
+            if(previous &&
+                previous.classList.contains("works-section-label")){
+                previous.hidden = !hasWork;
+            }
+        });
+
+        const headings = [
+            ...allWorks.querySelectorAll(".all-works-category")
+        ];
+
+        headings.forEach(heading =>{
+            let next = heading.nextElementSibling;
+            let hasWork = false;
+
+            while(next &&
+                  !next.classList.contains("all-works-category")){
+                
+                if(next.classList.contains("mini-works-grid")
+                   && !next.hidden){
+                   hasWork = true;
+                }
+
+                next = next.nextElementSibling;
+
+        }
+
+        heading.hidden = !hasWork;
+    });
+
+    allWorks.hidden = !grids.some(grid => !grid.hidden);
+}
+
+    function filterWorks(genre){
+        let visibleConut = 0;
+
+        cards.forEach(card => {
+            const genres = (
+                card.dataset.echoGenre || ""
+            ).split(/\s+/);
+
+            const show =
+                genre === "all" ||
+                genres.includes(genre);
+
+            card.hidden = !show;
+
+            if(show) {
+                visibleConut++;
+            }
+        });
+
+        updateHeadings();
+
+        buttons.forEach(button =>{
+            const active =
+                button.dataset.genre === genre;
+
+            button.classList.toggle(
+                "is-active", active
+        );
+
+            button.setAttribute(
+                "aria-pressed", String(active)
+            );
+        });
+
+        if(status){
+            status.textContent = visibleConut > 0
+                ? visibleConut + "作品を表示中"
+                :"このジャンルの作品はまだありません。";
+        }
+    }
+
+    buttons.forEach(button =>{
+        button.addEventListener("click",() => {
+
+            filterWorks(button.dataset.genre);
+
+            if(window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches)return;
+
+            const visibleCards = [...cards].filter(
+                card => !card.hidden
+            );
+
+            visibleCards.forEach((card, index) =>{
+
+                card.getAnimations().forEach(
+                    animation => animation.cancel()
+                );
+
+                card.animate(
+                    [
+                        {
+                            opacity: 0,
+                            transform:"translateY(50px) scale(0.92)",
+                            filter:"blur(8px)"
+                        },
+                        {
+                            opacity: 1,
+                            transform:"translateY(0) scale(1)",
+                            filter:"blur(0px)"
+                        }
+                    ],
+                    {
+                        duration: 650,
+                        delay: Math.min(index, 8) * 70,
+                        easing:"cubic-bezier(0.16, 1, 0.3, 1)"
+                    }
+                );
+
+            });
+
+        });
+
+    });
+
+    filterWorks("all");
+})();
+</script>
+
+
+</body>
+</html>
+
+
+

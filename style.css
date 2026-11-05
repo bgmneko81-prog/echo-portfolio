@@ -4921,3 +4921,171 @@ html{
     color: #10111C;
     transform: translateY(-4px);
 }
+
+
+/* =====================================
+   ABOUT / CREATOR NAME
+===================================== */
+
+/* ABOUTの配置基準 */
+.echo-about-hero {
+    position: relative;
+}
+
+/* 制作者名 */
+.about-creator {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+}
+
+/* 小さなラベル */
+.about-creator span {
+    display: block;
+    color: #FF9EC8;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    margin-bottom: 12px;
+}
+
+/* 制作者名 */
+.about-creator strong {
+    display: block;
+    color: #F6F2F7;
+    font-size: clamp(48px, 5vw, 90px);
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+
+    animation: fadeUp 1s ease-out both;
+}
+
+/* 補足 */
+.about-creator p {
+    color: #BDA2FF;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    margin-top: 14px;
+}
+
+/* タブレット・スマホ対応 */
+@media (max-width: 1000px) {
+    .about-creator {
+        position: static;
+        transform: none;
+        text-align: left;
+        margin-top: 36px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-creator strong {
+        animation: none;
+    }
+}
+
+
+/* 動画の音声案内 */
+.movie-sound-note {
+    margin-top: 12px;
+    color: #F0ACC8;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    text-align: right;
+}
+
+
+
+
+/* =====================================
+   HOME / ABOUT ECHO
+===================================== */
+
+.echo-about-section {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    margin: 100px 0 60px;
+    padding: 55px 0 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 70px;
+    align-items: start;
+
+    background: transparent;
+    border: none;
+    border-top: 1px solid #45404B;
+}
+
+.echo-about-label {
+    color: #FF9EC8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    margin: 0 0 28px;
+}
+
+.echo-about-section h2 {
+    color: #F6F2F7;
+    font-size: clamp(28px, 3.5vw, 46px);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.echo-about-body {
+    min-width: 0;
+}
+
+.echo-about-text {
+    color: #C9C3D3;
+    font-size: 15px;
+    line-height: 2.1;
+    margin: 0 0 24px;
+}
+
+.echo-about-end {
+    color: #FF9EC8;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 32px;
+}
+
+/* スマホ */
+@media (max-width: 720px) {
+    .echo-about-section {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin: 70px 0 40px;
+        padding-top: 38px;
+    }
+
+    .echo-about-section h2 {
+        font-size: 28px;
+    }
+
+    .echo-about-text {
+        font-size: 14px;
+    }
+}
+
+
+/* =====================================
+   LINK ONE / SOUND画像の見切れ防止
+===================================== */
+
+#sound-preview {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
+/* ホバー時に画像が拡大されないようにする */
+.point-visual:hover #sound-preview {
+    transform: none;
+}

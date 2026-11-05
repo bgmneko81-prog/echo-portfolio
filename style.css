@@ -3963,7 +3963,9 @@ html{
     #noise-patrol-detail .work-detail-preview,
     #all-here-detail .work-detail-preview,
     #black-sort-detail .work-detail-preview,
-    #round-shift-detail .work-detail-preview{
+    #round-shift-detail .work-detail-preview,
+    #last-call-detail .work-detail-preview,
+    #byakuya-detail .work-detail-preview{
         display: block;
 
         width: auto;
@@ -4048,12 +4050,14 @@ html{
     background: 
         linear-gradient(
             90deg,
-            rgba(10, 11, 16, 0.96) 0%,
-            rgba(10, 11, 16, 0.85) 38%,
-            rgba(10, 11, 16, 0.08) 100%
+            rgba(10, 11, 16, 0.90) 0%,
+            rgba(10, 11, 16, 0.65) 46%,
+            rgba(10, 11, 16, 0.25) 100%
         ),
         url("black-sort-illustration.png")
         right center / 155% auto no-repeat;
+
+    border: 1px solid #B65C62;
 
 }
 
@@ -4111,6 +4115,98 @@ html{
     line-height: 1;
     letter-spacing: 0.04em;
 }
+
+
+/* =====================================
+    LAST CALL HERO / COVER
+===================================== */
+
+.last-call-hero-cover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16, 18, 26, 0.96) 0%,
+            rgba(16, 18, 26, 0.76) 55%,
+            rgba(16, 18, 26, 0.18) 100%
+        ),
+        url("last-call-hero.png")
+        center center / cover no-repeat;
+
+    border: 1px solid #C65A4B;
+}
+
+
+/* ジャンル表記　*/
+.last-call-hero-cover span{
+    color: #F1A38C;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+}
+
+
+/* 作品タイトル　*/
+.last-call-hero-cover strong{
+    color: #FFFFFF;
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+}
+
+
+/* =====================================
+   白夜の庭 / WORKS COVER
+===================================== */
+
+.byakuya-cover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 22px;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(9, 21, 29, 0.95) 0%,
+            rgba(9, 21, 29, 0.70) 50%,
+            rgba(9, 21, 29, 0.15) 100%
+        ),
+        url("byakuya-no-niwa.png")
+        center center / cover no-repeat;
+
+    border: 1px solid #77DCEB;
+}
+
+
+/* ジャンル表記　*/
+.byakuya-cover span{
+    color: #A3E0C0;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+
+
+/* タイトル */
+.byakuya-cover strong{
+    color: #FFFFFF;
+    font-size: clamp(30px, 3.5vw, 42px);
+    font-weight: 900;
+    line-height: 1.1;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.65);
+}
+
 
 
 /* =====================================

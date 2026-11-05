@@ -90,12 +90,24 @@
                         01 / BUSINESS
                     </p>
 
-                    <h3>営業職としての経験</h3>
+                    <h3>営業職としての培った、信頼を積み重ねる姿勢</h3>
 
                     <p>
-                        営業職として社会人経験を積み、
-                        相手に合わせて情報を伝えることや、
-                        コミュニケーションの重要性を学んだ。
+                        営業職として、報告・連絡・相談を徹底し。
+                        周囲との情報共有を大切にしてきました。
+                    </p>
+
+                    <p>
+                        お客様への対応では、要望や認識に食い違いが生じないよう、
+                        一つひとつ確認しながら誠実に向き合うことを心掛けました。
+                        また、過去の案件や相談内容も覚えておき、
+                        それまでの経緯を踏まえて対応することを意識していました。
+                    </p>
+
+                    <p>
+                        この経験を通して、信頼関係は一度の提案だけで
+                        生まれるものではなく、日々の確認や情報共有、
+                        誠実な対応の積み重ねによって築かれることを学びました。
                     </p>
 
                 </li>
@@ -107,15 +119,44 @@
                         02 / CREATIVE
                     </p>
 
-                    <h3>Webデザイン・映像制作を学ぶ</h3>
+                    <h3>「好き」を、誰かに届ける仕事へ</h3>
 
                     <p>
-                        以前から関心のあった企画や表現を
-                        仕事につなげるため、職業訓練で
-                        Illustrator・Photoshop・Premiere Proなどを学習。
+                        幼い頃から、人を楽しませるための
+                        企画を考えることが好きでした。
+                    </p>
 
-                        映像やグラフィックの制作を通して、
-                        アイデアを形にする技術を身につけている。
+                    <p>
+                        その関心は、学生時代のライブ企画や、
+                        社会人になってからのVRchatイベントの
+                        企画・運営にもつながっています。
+                        自分が考えたアイデアが実際の体験となり、
+                        人の反応として返ってくることに、
+                        ものづくりの面白さを感じてきました。
+                    </p>
+
+                    <p>
+                        そうした経験を重ねる中で、
+                        企画を趣味として楽しむだけでなく、
+                        自分の発想や表現を通して、
+                        誰かの心や記憶に残るコンテンツを届ける仕事に
+                        挑戦したいと考えるようになりました。
+                    </p>
+
+                    <p>
+                        その思いを形にするため、
+                        職業訓練でWebデザイン・映像編集などを学習。
+                        授業で基礎技術を習得するとともに、
+                        CM・ゲームPV・Webサイトなどの
+                        自主制作にも取り組み、
+                        企画から制作まで実践してきました。
+                    </p>
+
+                    <p>
+                        制作を通して、
+                        アイデアを形にする技術だけでなく、
+                        見る人に何を伝え、どう感じてもらいたいのか考え、
+                        構成や演出を工夫することの大切さを学びました。
                     </p>
 
                 </li>
@@ -223,11 +264,6 @@
                     <summary>
                         BONUS TRACK 00 / UNRELEASED
                     </summary>
-
-                    <p>
-                        これは、まだ再生途中の記録。<br>
-                        続きは、これからつくっていく。
-                    </p>
 
                     <div class="bonus-recording">
                         <span class="bonus-recording-light" aria-hidden="true"></span>
@@ -432,9 +468,9 @@ document.addEventListener("DOMContentLoaded", () => {
         progress.textContent =
             `ROUND ${round} / ${maxRounds}`;
 
-        // ROUND 1 = 3回、ROUND 2 = 4回...
+        // ROUND 1 = 4回、ROUND 2 = 5回...
         sequence = Array.from(
-            { length: round + 2 },
+            { length: round + 3 },
             () => Math.floor(Math.random() * pads.length)
         );
 
@@ -445,11 +481,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(version !== gameVersion) return;
 
+        const lightTime = [550, 430, 320][round - 1];
+        const gapTime = [280, 220, 160][round - 1];
+
         for(const number of sequence){
 
             pads[number].classList.add("is-lit");
 
-            await sleep(550);
+            await sleep(lightTime);
 
             if(version !== gameVersion){
                 clearLights();
@@ -458,9 +497,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             pads[number].classList.remove("is-lit");
 
-            await sleep(280);
+            await sleep(gapTime);
 
             if(version !== gameVersion) return;
+
         }
 
         acceptingInput = true;

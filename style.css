@@ -3965,7 +3965,9 @@ html{
     #black-sort-detail .work-detail-preview,
     #round-shift-detail .work-detail-preview,
     #last-call-detail .work-detail-preview,
-    #byakuya-detail .work-detail-preview{
+    #byakuya-detail .work-detail-preview,
+    #farm-story-detail .work-detail-preview
+    #haunt-design-detail .work-detail-preview{
         display: block;
 
         width: auto;
@@ -4207,6 +4209,92 @@ html{
     text-shadow: 0 3px 12px rgba(0, 0, 0, 0.65);
 }
 
+
+/* =====================================
+   牧場経営譚 / WORKS COVER
+===================================== */
+
+.farm-story-cover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 22px;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 30, 21, 0.96) 0%,
+            rgba(20, 30, 21, 0.72) 50%,
+            rgba(20, 30, 21, 0.12) 100%
+        ),
+        url("farm-stroy.png")
+        center center / cover no-repeat;
+
+    border: 1px solid #E8C878;
+}
+
+
+/* ジャンル表記　*/
+.farm-story-cover span{
+    color: #B9DB85;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+
+
+/* 作品タイトル　*/
+.farm-story-cover strong{
+    color: #FFFFFF;
+    font-size: clamp(27px, 3vw, 40px);
+    font-weight: 900;
+    line-height: 1.15;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.65);
+}
+
+
+/* =====================================
+   HAUNT DESIGN / WORKS COVER
+===================================== */
+
+.haunt-design-cover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 22px;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(18, 14, 26, 0.96) 0%,
+            rgba(18, 14, 26, 0.72) 52%,
+            rgba(18, 14, 26, 0.18) 100%
+        ),
+        url("haunt-design.png")
+        center center / cover no-repeat;
+
+    border: 1px solid #AF88E8;
+}
+
+.haunt-design-cover span{
+    color: #C8A6F4;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+
+.haunt-design-cover strong{
+    color: #FFFFFF;
+    font-size: clamp(26px, 3.3vw, 42px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    text-shadow: 0 3 12px rgba(0, 0, 0, 0.7);
+}
 
 
 /* =====================================

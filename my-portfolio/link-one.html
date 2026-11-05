@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINK ONE | ECHO.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!--　サイト共通ナビゲーション　-->
+    <nav class="site-nav" aria-label="メインナビゲーション">
+
+        <a href="index.html">HOME</a>
+
+        <a href="works.html">WORKS</a>
+
+        <a href="projects.html">PROJECTS</a>
+
+        <a href="about.html">ABOUT</a>
+
+        <a href="contact.html">CONTACT</a>
+
+    </nav>
+        
+    <main class="detail-page">
+
+        <a class="back-link" href="works.html#works">
+            ← BACK TO WORKS
+        </a>
+
+        <p class="detail-category">
+            TRACK 01 / PRODUCT MOVIE
+        </p>
+
+        <h1> LINK ONE </h1>
+        <p class="detail-lead">音は、これからも。</p>
+
+        <img
+            class="detail-image"
+            src="link-one-hero.png"
+            alt="有線イヤホンLINK ONEの製品ビジュアル"
+        >
+
+        <section class="movie-section">
+            <h2>WATCH THE MOVIE</h2>
+
+            <div class="video-frame">
+                <iframe
+                   src="https://www.youtube.com/embed/rHJMnU5oMG8?si=9QgDAQjCf6gZcU5M&amp;controls=0"
+                   title="LINK ONE CM"
+                   loading="lazy"
+                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                   referrerpolicy="strict-origin-when-cross-origin"
+                   allowfullscreen>
+                </iframe>
+            </div>
+        </section>        
+
+        <section class="project-info">
+            <h2>PROJECT INFORMATION</h2>
+
+            <dl class="info-grid">
+
+                <div class="info-item">
+                    <dt>CATEGORY</dt>
+                    <dd>Product CM</dd>
+                </div>
+
+                <div class="info-item">
+                    <dt>ROLE</dt>
+                    <dd>企画・映像制作</dd>
+                </div>
+
+                <div class="info-item">
+                    <dt>TOOLS</dt>
+                    <dd>AfterEffects / PremierePro / Illustrator / Photoshop</dd>
+                </div>
+                
+            </dl>
+        </section>    
+
+        <section class="detail-content">
+            <h2>CONCEPT</h2>
+            <p>
+                有線イヤホン「LINK ONE」の架空製品CM。
+                音楽が過去から未来へと生活に寄り添う姿を
+                映像で表現した作品。
+            </p>
+        </section>
+        
+        <section class="creative-point">
+
+            <div class="point-visual">
+
+                <video
+                   class="cable-video"
+                   controls
+                   playsinline
+                   preload="metadata"
+                   poster="link-one-cable.png"
+                >
+
+                <source
+                   src="link-one-cable-demo.mp4"
+                   type="video/mp4"
+                >
+
+                </video>
+            </div>
+            
+            <div class="point-text">
+                <p class="point-number">
+                    CREATIVE POINT 01
+                </p>
+
+                <h2>選べる楽しさを、動きで表現。</h2>
+
+                <p>
+                    ケーブルの長さを切り替える演出では、
+                    AfterEffectsのTrim Pathsを使用。
+
+                    形状が変化する動きを通して、
+                    製品の選択肢を直観的に伝えられるよう
+                    工夫した。
+                </p>
+            </div>
+
+        </section>
+        
+        <section class="creative-point creative-point--reverse">
+
+            <div class="point-visual">
+                <img
+                  id="sound-preview"
+                  src="sound-music.jpg"
+                  alt="MUSICモードの演出画像"
+                  >
+            </div>
+
+            <div class="point-text">
+                <p class="point-number">
+                    CREATIVE POINT 02
+                </p>
+
+                <h2>音楽の楽しみ方を、直観的に。</h2>
+
+                <p>
+                    MUSIC・MOVIE・GAME・TALKの
+                    4つのSOUNDモードを視覚化。
+
+                    用途の違いを直観的に理解できるよう、
+                    画面の拡大と切り替えを組み合わせた。
+                </p>
+
+                <div class="sound-selector">
+
+                    <button type="button" class="sound-button is-active"
+                            data-mode="MUSIC">
+
+                      MUSIC
+                    </button>
+                    
+                    <button type="button" class="sound-button"
+                            data-mode="MOVIE">
+
+                      MOVIE
+                    </button>
+
+                    <button type="button" class="sound-button"
+                            data-mode="GAME">
+
+                      GAME
+                    </button>
+
+                    <button type="button" class="sound-button"
+                            data-mode="TALK">
+
+                      TALK
+                    </button>
+
+                </div>
+
+                <p class="sound-current">
+                    SELECTED MODE:
+                    <span id="selected-mode">MUSIC</span>
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 ECHO.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

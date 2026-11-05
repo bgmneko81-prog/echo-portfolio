@@ -3967,7 +3967,8 @@ html{
     #last-call-detail .work-detail-preview,
     #byakuya-detail .work-detail-preview,
     #farm-story-detail .work-detail-preview
-    #haunt-design-detail .work-detail-preview{
+    #haunt-design-detail .work-detail-preview,
+    #mogumogu-bullet-detail .work-detail-preview{
         display: block;
 
         width: auto;
@@ -4295,6 +4296,50 @@ html{
     letter-spacing: 0.02em;
     text-shadow: 0 3 12px rgba(0, 0, 0, 0.7);
 }
+
+
+/* =====================================
+   もぐもぐバレット / WORKS COVER
+===================================== */
+
+.mogumogu-bullet-cover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    padding: 22px;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(24, 37, 24, 0.94) 0%,
+            rgba(24, 37, 24, 0.65) 50%,
+            rgba(24, 37, 24, 0.08) 100%
+        ),
+        url("mogumogu-bullet.png")
+        center center / cover no-repeat;
+
+    border: 1px solid #F6D76D;
+}
+
+.mogumogu-bullet-cover span{
+    color: #9CE6AB;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+}
+    
+.mogumogu-bullet-cover strong{
+    color: #FFFFFF;    
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
+}
+
 
 
 /* =====================================

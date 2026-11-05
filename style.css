@@ -4879,3 +4879,45 @@ html{
         animation: none;
     }
 }
+
+
+/* =====================================
+   CONTACT / メール送信方法
+===================================== */
+
+/* ボタンの配置 */
+.contact-email-actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+
+/* 既存ボタンの余白を調整 */
+.contact-email-actions .contact-email-link{
+    margin-top: 0px;
+}
+
+
+/* メールアプリ：ピンク塗りつぶし　*/
+.contact-email-actions .contact-email-link:not(.contact-gmail-link){
+    background: #FF9EC8;
+    color: #10111C;
+    border: 1px solid #FF9EC8;
+}
+
+
+/*Gmail：ピンクの枠線　*/
+.contact-email-actions .contact-gmail-link{
+    background: transparent;
+    color: #FF9EC8;
+    border: 1px solid #FF9EC8;
+}
+
+/* Gmailボタンのホバー */
+.contact-gmail-link:hover{
+    background: #FF9EC8;
+    color: #10111C;
+    transform: translateY(-4px);
+}

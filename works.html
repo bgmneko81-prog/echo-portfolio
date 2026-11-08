@@ -99,7 +99,7 @@
             <div class="works-section-heading" id="featured-works">
             
                 <p class="works-section-label">
-                    01 / SELECTED WORKS
+                    TRACK 01
                 </p>
 
                 <h2>FEATURED WORKS</h2>
@@ -113,46 +113,46 @@
             <!--　作品一覧の開始　-->
             <div class="works-grid">
 
-            <article class="work-card" data-echo-genre="video">
+            <article class="work-card" data-echo-genre="game">
                
-                <a class="work-link" href="link-one.html">
+                <a class="work-link" href="record.html">
                     
                 <div class="work-frame">
                     <img
                         class="work-art"
-                        src="LINK ONE サムネ.jpg"
-                        alt="有線イヤホンLINK ONEのCMサムネイル"
+                        src="record-thumb.jpg"
+                        alt="夜の町を背景にしたRE：CORDのゲームPVサムネイル"
                     >
                 </div>
 
                 <p class="work-category">TRACK 01</p>
-                <h3>LINK ONE</h3>
-                <p>製品CM / 企画・映像作品</p>
+                <h3>RE:CORD</h3>
+                <p>自主制作ゲームPV / 企画・映像作品</p>
 
                 </a>
             </article>
 
-            <!--- TRACK 02 :RE:CODE -->
-            <article class="work-card" data-echo-genre="game">
+            <!--- TRACK 02 :LINK ONE -->
+            <article class="work-card" data-echo-genre="video">
 
-                <a class="work-link" href="record.html">
+                <a class="work-link" href="link-one.html">
 
 
                     <div class="work-frame">
                     
                         <img
                             class="work-art"
-                            src="record-thumb.jpg"
-                            alt="夜の町を背景にしたRE：CORDのゲームPVサムネイル"
+                            src="LINK ONE サムネ.jpg"
+                            alt="有線イヤホンLINK ONEのCMサムネイル"
                             >
 
                     </div>
 
-                    <p class="work-category">TRACK 02 / GAME PV</p>
+                    <p class="work-category">TRACK 02</p>
 
-                    <h3>RE:CORD</h3>
+                    <h3>LINK ONE</h3>
 
-                    <p>自主制作ゲームPV / 企画・映像作品</p>
+                    <p>製品CM / 企画・映像作品</p>
 
                 </a>
 
@@ -1500,7 +1500,9 @@
             
             <img
                 class="work-detail-preview"
-                src="noise-patrol-illustrarion.png"
+                src="noise-patrol-illustration.png"
+                data-slide-2="noise-patrol-02.png"
+                data-slide-3="noise-patrol-03.png"
                 alt="NOISE PATROLのゲームイメージイラスト"
                 loading="lazy"
             >
@@ -1563,6 +1565,8 @@
             <img
                 class="work-detail-preview"
                 src="all-here-illustration.png"
+                data-slide-2="all-here-02.png"
+                data-slide-3="all-here-03.png"
                 alt="全員そろっていますか！？のゲームイメージイラスト"
                 loading="lazy"
             >
@@ -1631,6 +1635,8 @@
             <img
                 class="work-detail-preview"
                 src="black-sort-illustration.png"
+                data-slide-2="black-sort-02.png"
+                data-slide-3="black-sort-03.png"
                 alt="BLACK SORTのゲーム画面イメージ"
                 loading="lazy"
             >
@@ -1703,6 +1709,8 @@
             <img
                 class="work-detail-preview"
                 src="round-shift-illustration.png"
+                data-slide-2="round-shift-02.png"
+                data-slide-3="round-shift-03.png"
                 alt="ROUND SHIFTのゲーム画面イメージ"
                 loading="lazy"
             >
@@ -1773,6 +1781,8 @@
             <img
                 class="work-detail-preview"
                 src="last-call-hero.png"
+                data-slide-2="last-call-02.png"
+                data-slide-3="last-call-03.png"
                 alt="LAST CALL HEROのゲーム企画ポスター"
                 loading="lazy"
             >
@@ -1840,6 +1850,8 @@
             <img
                 class="work-detail-preview"
                 src="byakuya-no-niwa.png"
+                data-slide-2="byakuya-no-niwa-02.png"
+                data-slide-3="byakuya-no-niwa-03.png"
                 alt="白夜の庭のゲーム企画ポスター"
                 loading="lazy"
             >
@@ -1922,6 +1934,8 @@
             <img
                 class="work-detail-preview"
                 src="farm-stroy.png"
+                data-slide-2="farm-story-02.png"
+                data-slide-3="farm-story-03.png"
                 alt="牧場経営譚のゲーム企画ポスター"
                 loading="lazy"
             >
@@ -2006,6 +2020,8 @@
             <img
                 class="work-detail-preview"
                 src="haunt-design.png"
+                data-slide-2="haunt-design-02.png"
+                data-slide-3="haunt-design-03.png"
                 alt="HAUNT DESIGNのゲーム企画ポスター"
                 loading="lazy"
             >
@@ -2075,6 +2091,8 @@
             <img
                 class="work-detail-preview"
                 src="mogumogu-bullet.png"
+                data-slide-2="mogumogu-bullet-02.png"
+                data-slide-3="mogumogu-bullet-03.png"
                 alt="もぐもぐバレットのゲーム企画ポスター"
                 loading="lazy"
             >
@@ -2312,9 +2330,347 @@
 })();
 </script>
 
+<script>
+(() => {
+
+    //2枚目・3枚目を設定した画像だけを対象にする
+    const targets = document.querySelectorAll(
+        '.work-popover .work-detail-preview[data-slide-2][data-slide-3]'
+    );
+
+    targets.forEach(firstImage => {
+
+        const sources = [
+            firstImage.getAttribute('src'),
+            firstImage.getAttribute('data-slide-2'),
+            firstImage.getAttribute('data-slide-3')
+        ];
+
+        const imageAlt = firstImage.alt || 'ゲーム企画イメージ';
+
+        const gallery = document.createElement('div');
+        gallery.className = 'game-gallery';
+        gallery.setAttribute(
+            'aria-label',
+            'ゲーム企画の画像ギャラリー'
+        );
+
+        gallery.innerHTML = `
+            <div class="game-gallery-stage">
+                <button type="button"
+                        class="game-gallery-prev"
+                        aria-label="前の画面">‹</button>
+                <button type="button"
+                        class="game-gallery-next"
+                        aria-label="次の画像">›</button>
+            </div>
+
+            <div class="game-gallery-footer">
+                <span class="game-gallery-count"
+                      aria-live="polite"></span>
+                <div class="game-gallery-dots"
+                     role="group"
+                     aria-label="表示画像の選択"></div>
+            </div>
+        `;      
+
+        firstImage.replaceWith(gallery);
+
+        const stage = gallery.querySelector('.game-gallery-stage');
+        const prevButton = gallery.querySelector('.game-gallery-prev');
+        const nextButton = gallery.querySelector('.game-gallery-next');
+        const dotArea = gallery.querySelector('.game-gallery-dots');
+        const count = gallery.querySelector('.game-gallery-count');
+
+        //画像3枚を作成
+        const slides = sources.map((src, i) => {
+
+            const img = i === 0
+                ? firstImage
+                : firstImage.cloneNode(false);
+
+            img.removeAttribute('data-slide-2');
+            img.removeAttribute('data-slide-3');
+
+            img.classList.remove('work-detail-preview');
+            img.classList.add('game-gallery-image');
+
+            img.src = src;
+            img.alt = i === 0
+                ? imageAlt
+                : `${imageAlt} (${i + 1}枚目) `;
+
+            img.hidden = i !== 0;
+
+            stage.insertBefore(img, nextButton);
+
+            return img;
+
+        });
+
+        let current = 0;
+
+        //画像下のドット
+        const dots = slides.map((_, i) => {
+
+            const dot = document.createElement('button');
+
+            dot.type = 'button';
+            dot.className = 'game-gallery-dot';
+            dot.setAttribute(
+                'aria-label',
+                `${i + 1}枚目を表示`
+            );
+
+            dot.addEventListener('click', () => show(i));
+            dotArea.appendChild(dot);
+
+            return dot;
+        });
+
+        //表示画面の切り替え
+        function show(i){
+        
+            current = (i + slides.length) % slides.length;
+
+            slides.forEach((img, k) => {
+                img.hidden = k !== current;
+            });
+
+            dots.forEach((dot, k) => {
+                dot.setAttribute(
+                    'aria-pressed',
+                    String(k === current)
+                );
+            });
+
+            count.textContent =
+                `${String(current + 1).padStart(2, '0')} / 03`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            show(current - 1);
+        });
+
+        nextButton.addEventListener('click', () => {
+            show(current + 1);
+        });
+
+        //スマホで右左にスワイプ
+        let touchStart = null;
+
+        stage.addEventListener('touchstart', event => {
+
+            if(event.touches.length !== 1) return;
+
+            touchStart = {
+                x: event.touches[0].clientX,
+                y: event.touches[0].clientY
+            };
+
+        }, { passive: true });
+
+        stage.addEventListener('touchend', event => {
+
+            if(!touchStart) return;
+
+            const dx =
+                event.changedTouches[0].clientX - touchStart.x;
+
+            const dy =
+                event.changedTouches[0].clientY - touchStart.y;
+
+            touchStart = null;
+
+            if(Math.abs(dx) >= 45 &&
+               Math.abs(dx) > Math.abs(dy)) {
+
+                if(event.cancelable) event.preventDefault();
+
+                show(current + (dx < 0 ? 1 : -1));
+               }
+        }, { passive: false });
+
+        show(0);
+    });
+
+})();
+</script>
+
+<script>
+(() => {
+
+    //拡大対象の作品画像
+    const images = document.querySelectorAll(
+        ".work-popover .work-detail-preview, " +
+        ".work-popover .game-gallery-image, " +
+        ".work-popover .lp-image-gallery img"
+    );
+
+    //画像専用の全画面ビューアー
+    const viewer = document.createElement("div");
+
+    viewer.className = "work-image-viewer";
+    viewer.setAttribute("popover", "manual");
+    viewer.setAttribute("role", "dialog");
+    viewer.setAttribute("aria-modal", "true");
+    viewer.setAttribute("aria-label", "作品画像の拡大表示");
+
+    viewer.innerHTML = `
+        <button
+            type="button"
+            class="work-image-viewer-close"
+            aria-label="拡大表示を閉じる"
+        >
+
+            ×
+        </button>
+
+        <img class="work-image-viewer-image" alt="">
+    `;
+
+    const viewerImage = viewer.querySelector("img");
+    const closeButton = viewer.querySelector("button");
+
+    let previousFocus = null;
+
+    function setViewerOrientation(image){
+
+        viewer.classList.remove(
+            "is-landscape",
+            "is-portrait",
+            "is-square"
+        );
+
+        const width = image.naturalWidth || image.width;
+        const height = image.naturalHeight || image.height;
+
+        if(!width || !height) return;
+
+        if(width > height * 1.08){
+            viewer.classList.add("is-landscape");
+        } else if(height > width * 1.08){
+            viewer.classList.add("is-portrait");
+        } else{
+            viewer.classList.add("is-square");
+        }
+    }
+
+    //画像を拡大表示
+    function openViewer(image){
+
+        const detail = image.closest(".work-popover");
+        if(!detail) return;
+
+        //元の詳細ポップアップの内側に配置
+        detail.appendChild(viewer);
+
+        previousFocus = document.activeElement;
+
+        viewerImage.src = image.currentSrc || image.src;
+        viewerImage.alt = image.alt || "作品画像";
+
+        setViewerOrientation(image);
+
+        viewer.showPopover();
+        closeButton.focus();
+        }
+
+        //拡大表示を閉じる
+        function closeViewer(){
+            
+            if(!viewer.matches(":popover-open")) return;
+
+            viewer.hidePopover();
+            viewerImage.removeAttribute("src");
+
+            viewer.classList.remove(
+                "is-landscape",
+                "is-portrait",
+                "is-square"
+            );
+
+            if(previousFocus instanceof HTMLElement){
+                previousFocus.focus({ preventScroll: true });
+            }
+        }
+
+        //全作品の画像にクリック機能を追加
+        images.forEach(image => {
+
+            //MIXTURE DAYSのLP画像はリンクを利用
+            const link = image.closest(".lp-image-gallery a");
+
+            if(link){
+
+                link.addEventListener("click", event => {
+                    event.preventDefault();
+                    openViewer(image);
+                });
+
+                link.setAttribute(
+                    "aria-label",
+                    "画像を拡大表示：" + (image.alt || "作品")
+                );
+
+            } else {
+
+                image.tabIndex = 0;
+                image.setAttribute("role", "button");
+
+                image.setAttribute(
+                    "aria-label",
+                    "画像を拡大表示：" + (image.alt || "作品")
+                );
+
+                image.addEventListener("click", () => {
+                    openViewer(image);
+                });
+
+                image.addEventListener("keydown", event =>{
+
+                    if(event.key === "Enter" || event.key === " "){
+                        event.preventDefault();
+                        openViewer(image);
+                    }
+
+                });
+            }
+        });
+
+        //×ボタン
+        closeButton.addEventListener("click", closeViewer);
+
+        //画像の外側をクリック
+        viewer.addEventListener("click", event => {
+            if(event.target === viewer) closeViewer();
+        });
+
+        //Escキーで閉じる
+        document.addEventListener("keydown", event => {
+
+            if(
+                viewer.matches(":popover-open") &&
+                event.key === "Escape"
+            ) {
+                event.preventDefault();
+                event.stopPropagation();
+                closeViewer();
+            }
+
+        }, true);
+
+        //全画面表示中は閉じるボタンにフォーカスを維持
+        viewer.addEventListener("keydown", event => {
+            if(event.key === "Tab") {
+               event.preventDefault();
+               closeButton.focus();
+            }
+        });
+
+    })();
+</script>
+
 
 </body>
 </html>
-
-
-

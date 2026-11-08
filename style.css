@@ -3563,7 +3563,7 @@ html{
     translate: 0 30px;
     transition:
         opacity 0.8s ease,
-        transition 0.8s ease;
+        translate 0.8s ease;
     transition-delay: var(--echo-delay, 0ms);
 }
 
@@ -3992,7 +3992,7 @@ html{
             rgba(12, 17, 27, 0.72) 55%,
             rgba(12, 17, 27, 0.2) 100%
         ),
-        url("noise-patrol-illustrarion.png")
+        url("noise-patrol-illustration.png")
         center 65% / cover no-repeat;
 }
 
@@ -4807,7 +4807,7 @@ html{
 }
 
 .about-page .lost-signal-pad:focus-visible,
-.about-page .lost-signal-start:focus-visible{
+.about-page #lost-signal-start:focus-visible{
     outline: 3px solid #FFFFFF;
     outline-offset: 4px;
 }
@@ -5088,4 +5088,1080 @@ html{
 /* ホバー時に画像が拡大されないようにする */
 .point-visual:hover #sound-preview {
     transform: none;
+}
+
+
+/* =====================================
+   HOME / GAME CONCEPT SHOWCASE
+===================================== */
+
+.home-game-showcase{
+    margin: 100px 0 0;
+    padding: 45px;
+    background: #1C1C2B;
+    border: 1px solid #464156;
+    border-radius: 16px;
+}
+
+.home-game-heading > p:first-child{
+    color: #BDA2FF;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+}
+
+.home-game-heading h2{
+    color: #FFFFFF;
+    font-size: clamp(28px, 4vw, 48px);
+    margin: 15px 0;
+}
+
+.home-game-lead{
+    color: #C9C2D3;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.home-game-slide{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.home-game-slide[hidden]{
+    display: none !important;
+}
+
+.home-game-cover{
+    width: 100%;
+    min-height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.home-game-info{
+    min-width: 0;
+}
+
+.home-game-genre{
+    color: #BDA2FF;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+}
+
+.home-game-info h3{
+    color: #FFFFFF;
+    font-size: clamp(28px, 3vw, 42px);
+    margin: 18px 0;
+    overflow-wrap: anywhere;
+}
+
+.home-game-info > p:not(.home-game-genre){
+    color: #C9C3D3;
+    line-height: 1.8;
+}
+
+.home-game-info a{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background: #BDA2FF;
+    color: #10111C;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.home-game-controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 28px;
+}
+
+.home-game-controls button{
+    padding: 12px 18px;
+    color: #FFFFFF;
+    background: transparent;
+    border: 1px solid #777186;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.home-game-controls button:hover{
+    color: #10111C;
+    background: #BDA2FF;
+}
+
+.home-game-controls button:focus-visible,
+.home-game-info a:focus-visible{
+    outline: 3px solid #65DDE0;
+    outline-offset: 3px;
+}
+
+#home-game-count{
+    color: #BDA2FF;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/*　スマホ対応　*/
+@media(max-width:720px){
+    .home-game-showcase{
+        margin-top: 65px;
+        padding: 25px 18px;
+    }
+
+
+    .home-game-slide{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .home-game-cover{
+        min-height: 220px;
+    }
+
+    .home-game-info h3{
+        font-size: 28px;
+    }
+
+    .home-game-controls button{
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================
+   HOME / GAME SLIDE ANIMATION
+===================================== */
+
+/* 作品を同じ位置に重ねる　*/
+.home-game-slides{
+    display: grid;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+
+/* 非選択の作品　*/
+.home-game-slide{
+    grid-area: 1 / 1;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: none;
+}
+
+
+/* 選択中の作品　*/
+.home-game-slide.is-active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* NEXT:右から登場　*/
+.home-game-slide.is-entering-next{
+    animation: gameEnterRight 0.7s ease both;
+    z-index: 2;
+}
+
+
+/* NEXT:左へ退場　*/
+.home-game-slide.is-leaving-next{
+    visibility: visible;
+    animation: gameExitLeft 0.7s ease both;
+    z-index: 1;
+}
+
+
+/* PREV:左から登場　*/
+.home-game-slide.is-entering-prev{
+    animation: gameEnterLeft 0.7s ease both;
+    z-index: 2;
+}
+
+
+/* PREV:右へ退場　*/
+.home-game-slide.is-leaving-prev{
+    visibility: visible;
+    animation: gameExitRight 0.7s ease both;
+    z-index: 1;
+}
+
+
+/* 右から中央へ　*/
+@keyframes gameEnterRight{
+    from{
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* 中央から左へ */
+@keyframes gameExitLeft{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+}
+
+
+/* 左から中央へ　*/
+@keyframes gameEnterLeft{
+    from{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* 中央から右へ　*/
+@keyframes gameExitRight{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 0;
+        transform: translateX(80px);
+    }
+}
+
+
+/* 作品ごとに色を切り替える　*/
+.home-game-showcase{
+    border-top: 3px solid var(--game-accent, #A3E0C0);
+    transition: border-color 0.5s ease;
+}
+
+.home-game-heading > p:first-child,
+#home-game-count{
+    color: var(--game-accent, #A3E0C0);
+    transition: color 0.5s ease;
+}
+
+
+/* 動きを減らす設定　*/
+@media(prefers-reduced-motion: reduce){
+    .home-game-slide{
+        animation: none !important;
+    }
+
+    .home-game-slide.is-leaving-next,
+    .home-game-slide.is-leaving-prev{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* =====================================
+   HOME / INTERACTION GUIDE
+===================================== */
+
+.echo-interaction-guide{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+
+    box-sizing: border-box;
+    max-width: 100%;
+
+    margin-top: 19px;
+    padding: 12px 15px;
+
+    background: #211C2B;
+    border: 1px solid #6F5267;
+    border-left: 3px solid #FF9EC8;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 25px #00000020;
+}
+
+.echo-interaction-guide-label{
+    color: #FF9EC8;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+}
+
+.echo-interaction-guide-text{
+    color: #F1EAF4;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.65;
+}
+
+.echo-interaction-guide-text > span{
+    color: #FF9EC8;
+    font-weight: 900;
+    padding-left: 3px;
+}
+
+
+/* 操作ガイドの下の余白　*/
+.echo-hero-copy .echo-tagline{
+    margin-top: 25px;
+}
+
+
+/* 作品ごとの枠色　*/
+.echo-stage .echo-card[data-work="record"]{
+    border-color: #BDA2FF;
+}
+
+.echo-stage .echo-card[data-work="round-shift"]{
+    border-color: #65DDE0;
+}
+
+.echo-stage .echo-card[data-work="haunt-design"]{
+    border-color: #AF88E8;
+}
+
+
+/* スマホ対応 */
+@media(max-width:720px){
+
+    .echo-interaction-guide{
+        margin-top: 17px;
+        padding: 11px 13px;
+    }
+
+    .echo-interaction-guide-text{
+        font-size: 11px;
+    }
+
+    .echo-hero-copy .echo-tagline{
+        margin-top: 21px;
+    }
+}
+
+
+/* =====================================
+   WORKS / IMAGE FULLSCREEN VIEWER
+===================================== */
+
+/* 詳細内の画像はクリック可能　*/
+.work-popover .work-detail-preview,
+.work-popover .lp-image-gallery img{
+    cursor: zoom-in;
+}
+
+.work-popover .work-detail-preview:focus-visible,
+.work-popover .lp-image-gallery a:focus-visible{
+    outline: 3px solid #F0ACC8;
+    outline-offset: 4px;
+}
+
+
+/* 画像の全画面表示　*/
+.work-image-viewer:popover-open{
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+
+    margin: 0;
+    padding: 32px;
+    border: none;
+
+    background: #080A10;
+    overflow: hidden;
+}
+
+
+/* 拡大画像　*/
+.work-image-viewer-image{
+    display: block;
+    width: auto;
+    height: auto;
+
+    max-width: min(88vw, 1400px);
+    max-height: min(82vh, 900px);
+
+    object-fit: contain;
+    margin: auto;
+}
+
+
+/* 横長画像　*/
+.work-image-viewer.is-landscape .work-image-viewer-image{
+    max-width: min(90vw, 1450px);
+    max-height: min(78dvh, 860px);
+}
+
+
+/* 縦長画像　*/
+.work-image-viewer.is-portrait .work-image-viewer-image{
+    max-width: min(72vw, 900px);
+    max-height: min(88dvh, 980px);
+}
+
+/* 正方形に近い画像　*/
+.work-image-viewer.is-square .work-image-viewer-image{
+    max-width: min(82vw, 1050px);
+    max-height: min(82dvh, 1050px);
+}
+
+
+/* 閉じるボタン　*/
+.work-image-viewer-close{
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    background: #211C2B;
+    color: #FFFFFF;
+
+    border: 1px solid #F0ACC8;
+    border-radius: 50%;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.work-image-viewer-close:focus-visible{
+    outline: 3px solid #FFFFFF;
+    outline-offset: 3px;
+}
+
+
+/* スマホ対応　*/
+@media(max-width:720px){
+
+    .work-image-viewer:popover-open{
+        padding: 65px 12px 20px;
+    }
+
+    .work-image-viewer-close{
+        top: 12px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .work-image-viewer.is-landscape .work-image-viewer-image{
+        max-width: 94vw;
+        max-height: 72dvh;
+    }
+
+    .work-image-viewer.is-portrait .work-image-viewer-image{
+        max-width: 82vw;
+        max-height: 84dvh;
+    }
+
+    .work-image-viewer.is-square .work-image-viewer-image{
+        max-width: 88vw;
+        max-height: 78dvh;
+    }
+}
+
+
+/* =====================================
+   WORKS / GAME 作品情報の間隔調整
+===================================== */
+
+/* ゲーム企画のタイトル　*/
+.mini-work-card[data-echo-genre="game"] h4{
+    margin-top: 12px;
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+
+/* タイトルとVIEW DETAILSの間隔　*/
+.mini-work-card[data-echo-genre="game"] .mini-work-button::after{
+    margin-top: 0;
+}
+
+/* VIEW DETAILSと説明文の間隔　*/
+.mini-work-card[data-echo-genre="game"] .work-ai-note{
+    margin-top: 4px;
+}
+
+
+/* =====================================
+   RE:CORD / 詳細説明の統一
+===================================== */
+
+/* セクション共通　*/
+.record-page .record-detail-section{
+    max-width: 760px;
+    margin-top: 80px;
+    padding-top: 28px;
+    border-top: 1px solid #42303B;
+}
+
+
+/* 大見出し　*/
+.record-page .record-detail-section h2{
+    color: #E9EAF0;
+    font-size: clamp(26px, 4vw, 36px);
+    line-height: 1.4;
+    margin: 0 0 30px;
+}
+
+
+/* 項目見出し　*/
+.record-page .record-detail-section h3{
+    color: #C98290;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+    margin: 30px 0 10px;
+}
+
+
+/* 説明文　*/
+.record-page .record-detail-section p {
+    color: #BABCC8;
+    font-size: 16px;
+    line-height: 2;
+    margin: 0;
+}
+
+
+/* スマホ　*/
+@media(max-width:720px){
+
+    .record-page .record-detail-section{
+        margin-top: 60px;
+    }
+
+    .record-page .record-detail-section p{
+        font-size: 14px;
+    }
+}
+
+
+/* =====================================
+   GAME / SCREENSHOT GALLERY
+===================================== */
+
+.game-gallery{
+    width: 100%;
+    max-width: 850px;
+    margin: 16px auto 28px;
+}
+
+
+/* 画像の表示エリア　*/
+.game-gallery-stage{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: clamp(220px, 44vh, 430px);
+
+    background: #101116;
+    border: 1px solid #45404B;
+    border-radius: 12px;
+    overflow: hidden;
+
+    touch-action: pan-y;
+}
+
+
+/* 画像　*/
+.game-gallery .game-gallery-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    cursor: zoom-in;
+    border-radius: 8px;
+}
+
+.game-gallery .game-gallery-image[hidden]{
+    display: none;
+}
+
+
+/*　左右の矢印　*/
+.game-gallery-prev,
+.game-gallery-next{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #F0ACC8;
+    border-radius: 50%;
+
+    background: #211C2B;
+    color: #FFFFFF;
+
+    font-size: 29px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.game-gallery-prev{
+    left: 12px;
+}
+
+.game-gallery-next{
+    right: 12px;
+}
+
+.game-gallery-prev:hover,
+.game-gallery-next:hover{
+    background: #F0ACC8;
+    color: #101116;
+}
+
+
+/* 枚数とドット　*/
+.game-gallery-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    margin-top: 12px;
+}
+
+.game-gallery-count{
+    color: #A7A4AD;
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+}
+
+.game-gallery-dots{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.game-gallery-dot{
+    width: 9px;
+    height: 9px;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #77717F;
+    cursor: pointer;
+}
+
+
+/* 選択中のドット */
+.game-gallery-dot[aria-pressed="true"]{
+    width: 22px;
+    border-radius: 99px;
+    background: #F0ACC8;
+}
+
+
+/* キーボード操作　*/
+.game-gallery button:focus-visible,
+.game-gallery-image:focus-visible{
+    outline: 3px solid #F0ACC8;
+    outline-offset: 3px;
+}
+
+
+/*スマホ　*/
+@media(max-width:720px){
+
+    .game-gallery-stage{
+        height: clamp(190px, 38vh, 330px);
+    }
+
+    .game-gallery-prev,
+    .game-gallery-next{
+        width: 34px;
+        height: 34px;
+        font-size: 34px;
+    }
+
+    .game-gallery-prev{
+        left: 6px;
+    }
+
+    .game-gallery-next{
+        right: 6px;
+    }
+}
+
+
+/* =====================================
+   HOME / BONUS TRACK
+===================================== */
+
+/* 「発見する。」ボタン */
+.echo-discover-btn {
+    display: inline;
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    color: #FF9EC8;
+    font: inherit;
+    font-weight: inherit;
+
+    cursor: pointer;
+
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 5px;
+
+    transition:
+        color 0.3s ease,
+        text-decoration-color 0.3s ease;
+}
+
+/* ホバー・開いた状態 */
+.echo-discover-btn:hover,
+.echo-discover-btn[aria-expanded="true"] {
+    color: #F0ACC8;
+    text-decoration-color: currentColor;
+}
+
+/* キーボード操作 */
+.echo-discover-btn:focus-visible {
+    outline: 2px solid #F0ACC8;
+    outline-offset: 4px;
+}
+
+/* BONUS TRACK全体 */
+.home-bonus-panel {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+
+    margin: 32px auto 70px;
+    scroll-margin-top: 90px;
+}
+
+/* 閉じているとき */
+.home-bonus-panel[hidden] {
+    display: none !important;
+}
+
+/* 見出しの余白 */
+.home-bonus-panel .vision-secret {
+    margin-top: 0;
+}
+
+/* ゲームを中央に配置 */
+.home-bonus-panel .lost-signal {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 出現演出 */
+.home-bonus-panel:not([hidden]) {
+    animation: bonusTrackReveal 0.55s ease-out both;
+}
+
+/* スマホ対応 */
+@media (max-width: 720px) {
+
+    .home-bonus-panel {
+        margin-top: 24px;
+        margin-bottom: 50px;
+    }
+
+}
+
+/* 動きを減らす設定 */
+@media (prefers-reduced-motion: reduce) {
+
+    .home-bonus-panel:not([hidden]) {
+        animation: none;
+    }
+
+    .echo-discover-btn {
+        transition: none;
+    }
+}
+
+
+/* =====================================
+   ECHO / DISCOVER RIPPLE
+   発見する。波紋演出
+===================================== */
+
+/* 波紋の中心 */
+.echo-discover-btn {
+    position: relative;
+    display: inline-block;
+    isolation: isolate;
+}
+
+/* 文字は波紋より手前 */
+.echo-discover-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* 波紋全体 */
+.echo-discover-rings {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* 4つの円 */
+.echo-discover-rings span {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 42px;
+    height: 42px;
+    margin: -21px 0 0 -21px;
+
+    border: 1.5px solid;
+    border-radius: 50%;
+
+    opacity: 0;
+    pointer-events: none;
+
+    animation: echoDiscoverRipple 5.2s ease-out infinite;
+}
+
+/* ロード画面と同じ4色 */
+.echo-discover-rings span:nth-child(1) {
+    border-color: #65DDE0;
+    animation-delay: 0s;
+}
+
+.echo-discover-rings span:nth-child(2) {
+    border-color: #BDA2FF;
+    animation-delay: 0.16s;
+}
+
+.echo-discover-rings span:nth-child(3) {
+    border-color: #FF9EC8;
+    animation-delay: 0.32s;
+}
+
+.echo-discover-rings span:nth-child(4) {
+    border-color: #FFD36F;
+    animation-delay: 0.48s;
+}
+
+/* 波紋が広がって消える */
+@keyframes echoDiscoverRipple {
+
+    0% {
+        transform: scale(0.35);
+        opacity: 0;
+    }
+
+    6% {
+        opacity: 0.75;
+    }
+
+    27% {
+        transform: scale(3);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+
+}
+
+/* ホバーで文字が淡く発光 */
+.echo-discover-btn:hover .echo-discover-text {
+    text-shadow: 0 0 14px rgba(255, 158, 200, 0.55);
+}
+
+/* BONUS TRACKを開いたら波紋を停止 */
+.echo-discover-btn[aria-expanded="true"]
+.echo-discover-rings span {
+    animation: none;
+    opacity: 0;
+}
+
+/* 動きを減らす設定への対応 */
+@media (prefers-reduced-motion: reduce) {
+
+    .echo-discover-rings span {
+        animation: none;
+        opacity: 0;
+    }
+
+}
+
+
+/* =====================================
+   LINK ONE / DETAIL PAGE
+===================================== */
+
+/* ページ全体 */
+.link-one-page {
+    background:
+        radial-gradient(
+            circle at 82% 15%,
+            rgba(42, 106, 124, 0.22),
+            transparent 42%
+        ),
+        linear-gradient(
+            145deg,
+            #151E28,
+            #101116 72%
+        );
+}
+
+/* アクセントカラー */
+.link-one-page .back-link,
+.link-one-page .detail-category,
+.link-one-page .project-info h2,
+.link-one-page .point-number {
+    color: #65DDE0;
+}
+
+/* キャッチコピー */
+.link-one-page .detail-lead {
+    color: #D0EDF0;
+}
+
+/* メインビジュアル */
+.link-one-page .detail-image {
+    border: 1px solid #31515E;
+    box-sizing: border-box;
+
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+/* =====================================
+   CREATIVE DIRECTION
+===================================== */
+
+/* 制作意図のエリア */
+.link-one-page .link-one-direction {
+    max-width: 760px;
+
+    margin-top: 80px;
+    padding-top: 30px;
+
+    border-top: 1px solid #31515E;
+}
+
+/* 見出し */
+.link-one-page .link-one-direction h2 {
+    font-size: clamp(26px, 4vw, 36px);
+    line-height: 1.4;
+
+    margin: 0 0 24px;
+}
+
+/* 本文 */
+.link-one-page .link-one-direction p {
+    color: #CBD4DB;
+    font-size: 16px;
+    line-height: 2;
+
+    margin: 0 0 18px;
+}
+
+/* =====================================
+   CREATIVE POINT
+===================================== */
+
+/* 各演出の区切り線 */
+.link-one-page .creative-point {
+    border-top-color: #31515E;
+}
+
+/* =====================================
+   SOUND MODE
+===================================== */
+
+/* 操作案内 */
+.link-one-page .sound-interaction-guide {
+    margin: 24px 0 0;
+
+    color: #65DDE0;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+/* ボタンのホバー */
+.link-one-page .sound-button:hover,
+.link-one-page .sound-button:focus-visible {
+    border-color: #65DDE0;
+}
+
+/* 選択中のSOUNDモード */
+.link-one-page .sound-button.is-active {
+    background-color: #65DDE0;
+    border-color: #65DDE0;
+    color: #101116;
+}
+
+/* 選択中のモード名 */
+.link-one-page .sound-current span {
+    color: #65DDE0;
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 720px) {
+
+    .link-one-page .link-one-direction {
+        margin-top: 64px;
+        padding-top: 24px;
+    }
+
+    .link-one-page .link-one-direction p {
+        font-size: 15px;
+    }
+
 }

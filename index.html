@@ -121,6 +121,20 @@
                 </a>
             </div>
 
+            <!-- ジャケット操作ガイド -->
+            <div class="echo-interaction-guide" role="note">
+
+                <span class="echo-interaction-guide-label">
+                    HOW TO PLAY / 01
+                </span>
+
+                <span class="echo-interaction-guide-text">
+                    小さなジャケットをクリックして、
+                    作品を切り替えよう。
+                </span>
+
+            </div>
+
             <p class="echo-tagline">
                 STILL PLAYING. STILL RESONATING.
             </p>
@@ -132,7 +146,8 @@
 
             <!--　メイン作品　-->
             <a href="record.html"
-               class="echo-card echo-card-main">
+               class="echo-card echo-card-main"
+               data-work="record">
 
               <img src="record-thumb.jpg" alt="RE:CORD">
 
@@ -143,24 +158,30 @@
             </a>
 
             <!--　サブ作品01　-->
-            <a href="link-one.html"
-               class="echo-card echo-card-link">
+            <a href="works.html#all-works"
+               class="echo-card echo-card-link"
+               data-work="round-shift">
 
-              <img src="LINK ONE サムネ.jpg" alt="LINK ONE">
+              <img src="round-shift-illustration.png"
+                   alt="ROUND SHIFT">
 
               <span class="echo-card-label">
-                VIDEO / LINK ONEのCMサムネイル
+                GAME CONCEPT
+                <strong>ROUND SHIFT</strong>
               </span>
             </a>
 
             <!--　サブ作品02　-->
-            <a href="works.html"
-               class="echo-card echo-card-design">
+            <a href="works.html#all-works"
+               class="echo-card echo-card-design"
+               data-work="haunt-design">
 
-              <img src="corporate-series-thumb.png" alt="FRAME WORKS">
+              <img src="haunt-design.png"
+                   alt="HAUNT DESIGN">
 
               <span class="echo-card-label">
-                DESIGN / FRAME WORKS
+                GAME CONCEPT
+                <strong>HAUNT DESIGN</strong>
               </span>
             </a>
 
@@ -180,10 +201,10 @@
             <div class="works-section-heading">
 
                 <p class="works-section-label">
-                    TRACK　LIST　/　FEATURED　WORKS
+                    TRACK LIST / FEATURED WORKS
                 </p>
 
-                <h2>SELECT　YOUR　TRACK.</h2>
+                <h2>SELECT YOUR TRACK.</h2>
 
                 <p class="works-section-description">
                     企画から映像表現まで。
@@ -195,26 +216,7 @@
             <!--　作品一覧の開始　-->
             <div class="works-grid">
 
-            <article class="work-card">
-               
-                <a class="work-link" href="link-one.html">
-                    
-                <div class="work-frame">
-                    <img
-                        class="work-art"
-                        src="LINK ONE サムネ.jpg"
-                        alt="有線イヤホンLINK ONEのCMサムネイル"
-                    >
-                </div>
-
-                <p class="work-category">TRACK 01</p>
-                <h3>LINK ONE</h3>
-                <p>製品CM / 企画・映像作品</p>
-
-                </a>
-            </article>
-
-            <!--- TRACK 02 :RE:CODE -->
+            <!--- TRACK 01 :RE:CODE -->
             <article class="work-card">
 
                 <a class="work-link" href="record.html">
@@ -230,17 +232,126 @@
 
                     </div>
 
-                    <p class="work-category">TRACK　02　/　GAME　PV</p>
+                    <p class="work-category">TRACK 01 / GAME PV</p>
 
                     <h3>RE:CORD</h3>
 
-                    <p>自主制作ゲームPV　/　企画・映像作品</p>
+                    <p>自主制作ゲームPV / 企画・映像作品</p>
 
                 </a>
 
             </article>
 
+            <article class="work-card">
+               
+                <a class="work-link" href="link-one.html">
+                    
+                <div class="work-frame">
+                    <img
+                        class="work-art"
+                        src="LINK ONE サムネ.jpg"
+                        alt="有線イヤホンLINK ONEのCMサムネイル"
+                    >
+                </div>
+
+                <p class="work-category">TRACK 02</p>
+                <h3>LINK ONE</h3>
+                <p>製品CM / 企画・映像作品</p>
+
+                </a>
+            </article>
+
             </div>
+
+            <!-- GAME CONCEPT SHOWCASE-->
+            <section class="home-game-showcase" aria-labelledby="home-game-title">
+
+                <div class="home-game-heading">
+                    <p>03 / GAME CONCEPT SHOWCASE</p>
+                    <h2 id="home-game-title">SELECT YOUR GAME.</h2>
+                    <p class="home-game-lead">
+                        オリジナルゲーム企画を選んで、のぞいてみよう。
+                    </p>
+                </div>
+
+                <div class="home-game-slides">
+
+                    <!-- 01 全員そろってますか？ -->
+                    <article class="home-game-slide is-active">
+
+                        <div class="home-game-cover all-here-cover">
+                            <span>ORIGINAL GAME</span>
+                            <strong>
+                                全員<br>
+                                そろってますか！？
+                            </strong>
+                        </div>
+
+                        <div class="home-game-info">
+                            <p class="home-game-genre">
+                                SIMULATION / GAME CONCEPT
+                            </p>
+                            <h3>全員そろってますか！？</h3>
+                            <p>見下ろし型・校外学習引率シミュレーション</p>
+                            <a href="works.html#all-works">
+                                ゲーム企画を見る ↗
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 02 ROUND SHIFT -->
+                    <article class="home-game-slide">
+                        <div class="home-game-cover round-shift-cover">
+                            <span>ORIGINAL GAME</span>
+                            <strong>ROUND SHIFT</strong>
+                        </div>
+                        <div class="home-game-info">
+
+                            <p class="home-game-genre">TACTICAL / GAME CONCEPT</p>
+                            <h3>ROUND SHIFT</h3>
+                            <p>4vs4・ラウンド制戦術FPS</p>
+                            <a href="works.html#all-works">
+                                ゲーム企画を見る ↗
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 03 HAUNT DESIGN -->
+                    <article class="home-game-slide">
+
+                        <div class="home-game-cover haunt-design-cover">
+                            <span>ORIGINAL GAME</span>
+                            <strong>HAUNT<br>DESIGN</strong>
+                        </div>
+
+                        <div class="home-game-info">
+                            <p class="home-game-genre">HORROR / GAME CONCEPT</p>
+                            <h3>HAUNT DESIGN</h3>
+                            <p>お化け屋敷制作・運営ホラー</p>
+                            <a href="works.html#all-works">
+                                ゲーム企画を見る ↗
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="home-game-controls">
+                    <button type="button" id="home-game-prev" aria-label="前のゲーム">
+                        ← PREV
+                    </button>
+
+                    <span id="home-game-count" aria-live="polite">
+                        01 / 03
+                    </span>
+
+                    <button type="button" id="home-game-next" aria-label="次のゲーム">
+                        NEXT →
+                    </button>
+                </div>
+
+            </section>
+
 
             <!-- ECHOとは -->
             <section class="echo-about-section">
@@ -269,12 +380,153 @@
                     </p>
 
                     <p class="echo-about-end">
-                        観る。選ぶ。触れる。発見する。
+                        観る。選ぶ。触れる。
+
+                    <button
+                        type="button"
+                        class="echo-discover-btn"
+                        id="echo-discover-btn"
+                        aria-controls="home-bonus-panel"
+                        aria-expanded="false"
+                    >
+
+                        <!-- 4色の波紋 -->
+                        <span class="echo-discover-rings" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+
+                        <!-- クリックする文字 -->
+                        <span class="echo-discover-text">
+                            発見する。
+                        </span>
+                    </button>
+
                     </p>
+                         
                 </div>
             
             </section>
+           <!-- =====================================
+                      HOME / BONUS TRACK
+           ===================================== -->
 
+           <div
+               id="home-bonus-panel"
+               class="about-page home-bonus-panel"
+               hidden
+           >
+
+               <details class="vision-secret">
+
+                  <summary>
+                      BONUS TRACK 00 / UNRELEASED
+                  </summary>
+
+                  <div class="bonus-recording">          
+                    <span
+                         class="bonus-recording-light"
+                         aria-hidden="true"
+                    ></span>
+                    <span>STILL RECORDING...</span>
+                </div>
+
+                <!-- LOST SIGNAL -->
+                <div class="lost-signal" id="lost-signal">
+            
+                    <div class="lost-signal-top">
+                        <span>SIGNAL ARCHIVE / 00</span>
+                        <span>● OFFLINE</span>
+                    </div>
+
+                    <h3>LOST SIGNAL<span>.</span></h3>
+
+                    <p class="lost-signal-lead">
+                        失われた信号を、再接続してください。<br>
+                        光った順番を覚えて、同じ順番に入力。
+                    </p>
+
+                    <!-- 信号ボタン -->
+                    <div
+                        class="lost-signal-grid"
+                        role="group"
+                        aria-label="信号入力"
+                    >
+
+                        <button
+                            type="button"
+                            class="lost-signal-pad"
+                            data-signal="0"
+                            aria-label="信号01"
+                            disabled
+                        >01</button>
+
+                        <button
+                            type="button"
+                            class="lost-signal-pad"
+                            data-signal="1"
+                            aria-label="信号02"
+                            disabled
+                        >02</button>
+
+                        <button
+                            type="button"
+                            class="lost-signal-pad"
+                            data-signal="2"
+                            aria-label="信号03"
+                            disabled
+                        >03</button>
+
+                    </div>
+
+                    <!-- 操作 -->
+                    <div class="lost-signal-actions">
+
+                        <button
+                            type="button"
+                            id="lost-signal-start"
+                        >
+
+                            CONNECT
+                        </button>
+
+                        <span id="lost-signal-progress">
+                            ROUND 0 / 3
+                        </span>
+
+                    </div>    
+
+                    <p
+                        class="lost-signal-status"
+                        id="lost-signal-status"
+                        role="status"
+                    >
+                        CONNECTを押して開始
+                    </p>
+
+                    <!-- クリア後のメッセージ -->
+                    <div
+                        class="lost-signal-result"
+                        id="lost-signal-result"
+                        hidden
+                    >
+
+                        <strong>RECORD RESTORED.</strong>
+
+                        <p>
+                            この記録の続きは、まだ存在しない。<br>
+                            だから、これからつくる。
+                        </p>
+
+                    </div>
+                    
+                </div>
+
+                </details>
+            
+            </div>
 
            <!--　WORKS専用ページへのリンク　-->
            <a class="archive-link" href="works.html">
@@ -301,22 +553,22 @@
     ];
 
     const works = {
-        "record.html":{
+        "record":{
             title:"RE:CORD",
             genre:"GAME",
             color:"#BDA2FF"
         },
 
-        "link-one.html":{
-            title:"LINK ONE",
-            genre:"VIDEO",
+        "round-shift":{
+            title:"ROUND SHIFT",
+            genre:"GAME CONCEPT",
             color:"#65DDE0"
         },
 
-        "works.html":{
-            title:"FRAME WORKS",
-            genre:"DESIGN",
-            color:"#FFD36F"
+        "haunt-design":{
+            title:"HAUNT DESIGN",
+            genre:"GAME CONCEPT",
+            color:"#C8A6F4"
         }
     };
 
@@ -327,7 +579,7 @@
     function updateSelected(){
         const main = hero.querySelector(".echo-card-main");
         const url = main.getAttribute("href");
-        const work = works[url];
+        const work = works[main.dataset.work];
 
         if(!work) return;
 
@@ -339,7 +591,7 @@
         openLink.href = url;
 
         cards.forEach(card => {
-            const cardWork = works[card.getAttribute("href")];
+            const cardWork = works[card.dataset.work];
             if (!cardWork) return;
 
             const action = card === main
@@ -531,6 +783,419 @@
     });
 })();
 </script>
+
+<script>
+(() => {
+    const showcase = document.querySelector(".home-game-showcase");
+    if(!showcase) return;
+
+    const slides = [...showcase.querySelectorAll(".home-game-slide")];
+    const prev = document.getElementById("home-game-prev");
+    const next = document.getElementById("home-game-next");
+    const count = document.getElementById("home-game-count");
+
+    let current = 0;
+    let timer = null;
+    let manuallySelected = false;
+    let isAnimating = false;
+
+    function showSlide(index, direction = "next"){
+
+        const nextIndex =
+            (index + slides.length) % slides.length;
+
+        if(isAnimating) return;
+
+        if(nextIndex !== current){
+
+            isAnimating = true;
+
+            const oldSlide = slides[current];
+            const newSlide = slides[nextIndex];
+
+            const leavingClass = "is-leaving-" + direction;
+            const enteringClass = "is-entering-" + direction;
+
+            //前の作品を退場させる
+            oldSlide.classList.remove("is-active");
+            oldSlide.classList.add(leavingClass);
+            oldSlide.setAttribute("aria-hidden", "true");
+            oldSlide.inert = true;
+
+            //次の作品を登場させる
+            newSlide.classList.add("is-active", enteringClass);
+            newSlide.setAttribute("aria-hidden", "false");
+            newSlide.inert = false;
+
+            current = nextIndex;
+
+            //アニメーション終了後にクラスを整理
+            setTimeout(() => {
+                oldSlide.classList.remove(leavingClass);
+                newSlide.classList.remove(enteringClass);
+                isAnimating = false;
+            }, 700);
+        }
+
+        const colors = [
+            "#A3E0C0", // 全員そろってますか！？
+            "#65DDE0", // ROUND SHIFT
+            "#C8A6F4", // HAUNT DESIGN
+        ];
+
+        showcase.style.setProperty(
+            "--game-accent",
+            colors[current]
+        );
+
+        count.textContent = 
+            String(current + 1).padStart(2, "0") +
+            " / " +
+            String(slides.length).padStart(2, "0")
+    }
+
+    function stopAuto(){
+        clearInterval(timer);
+        timer = null;
+    }
+
+    function startAuto(){
+        if(manuallySelected || timer) return;
+        if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        timer = setInterval(() => {
+            showSlide(current + 1);
+        }, 6000);
+    }
+
+    prev.addEventListener("click", () => {
+        manuallySelected = true;
+        stopAuto();
+        showSlide(current - 1, "prev");
+    });
+
+    next.addEventListener("click", () => {
+        manuallySelected = true;
+        stopAuto();
+        showSlide(current + 1);
+    });
+
+    // マウスを乗せている間は自動切り替えを停止
+    showcase.addEventListener("mouseenter", stopAuto);
+    showcase.addEventListener("mouseleave", startAuto);
+    showcase.addEventListener("focusin", stopAuto);
+
+    // スマホのスワイプ
+    let touchStartX = 0;
+
+    showcase.addEventListener("touchstart", (event) => {
+        touchStartX =event.changedTouches[0].clientX;
+    },{ passive: true });
+
+    showcase.addEventListener("touchend", (event) => {
+        const difference = event.changedTouches[0].clientX - touchStartX;
+
+        if(Math.abs(difference) < 50) return;
+
+        manuallySelected = true;
+        stopAuto();
+        showSlide(
+            current + (difference < 0 ? 1 : -1),
+            difference < 0 ? "next" : "prev"
+        );
+    }, { passive: true });
+
+    showSlide(0);
+    startAuto();
+})();
+</script>
+
+
+
+<script>
+(() => {
+    const button =
+        document.getElementById("echo-discover-btn");
+
+    const panel =
+        document.getElementById("home-bonus-panel");
+
+    if (!button || !panel) return;
+
+    const track =
+        panel.querySelector(".vision-secret");
+
+    button.addEventListener("click", () => {
+
+        const isOpening = panel.hidden;
+
+        panel.hidden = !isOpening;
+
+        button.setAttribute(
+            "aria-expanded",
+            String(isOpening)
+        );
+
+        if (track) {
+            track.open = isOpening;
+        }
+
+        if (isOpening) {
+            const reduceMotion = window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            ).matches;
+
+            panel.scrollIntoView({
+                behavior: reduceMotion ? "auto" : "smooth",
+                block: "nearest"
+            });
+        }
+    });
+
+    // BONUS TRACKの見出しから閉じた場合
+    if (track) {
+        track.addEventListener("toggle", () => {
+
+            if (!track.open && !panel.hidden) {
+                panel.hidden = true;
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+            }
+        });
+    }
+
+})();
+</script>
+
+
+<!-- =====================================
+     LOST SIGNAL / GAME SYSTEM
+===================================== -->
+
+<script>
+(() => {
+
+    const game = document.getElementById("lost-signal");
+    if(!game) return;
+
+    const pads = [
+        ...game.querySelectorAll(".lost-signal-pad")
+    ];
+
+    const startButton =
+        document.getElementById("lost-signal-start");
+
+    const progress =
+        document.getElementById("lost-signal-progress");
+
+    const status =
+        document.getElementById("lost-signal-status");
+
+    const result = 
+        document.getElementById("lost-signal-result");
+
+    const secret = game.closest("details");
+
+    const maxRounds = 3;
+
+    let round = 0;
+    let sequence = [];
+    let inputIndex = 0;
+    let acceptingInput = false;
+    let gameVersion = 0;
+
+    // 時間を空ける処理
+    const sleep = ms =>
+        new Promise(resolve => setTimeout(resolve, ms));
+
+    // 信号ボタンの操作可否
+    function enablePads(enabled){
+        pads.forEach(pad => {
+            pad.disabled = !enabled;
+        });
+    }
+
+    // 光を消す
+    function clearLights(){
+        pads.forEach(pad => {
+            pad.classList.remove("is-lit");
+        });
+    }
+
+    // 信号を順番に光らせる
+    async function playRound(version) {
+
+        acceptingInput = false;
+        enablePads(false);
+        inputIndex = 0;
+        
+        progress.textContent =
+            `ROUND ${round} / ${maxRounds}`;
+
+        // ROUND 1 = 4回、ROUND 2 = 5回...
+        sequence = Array.from(
+            { length: round + 3 },
+            () => Math.floor(Math.random() * pads.length)
+        );
+
+        status.textContent =
+            "信号を再生中。順番を覚えてください。";
+
+        await sleep(600);
+
+        if(version !== gameVersion) return;
+
+        const lightTime = [550, 430, 320][round - 1];
+        const gapTime = [280, 220, 160][round - 1];
+
+        for(const number of sequence){
+
+            pads[number].classList.add("is-lit");
+
+            await sleep(lightTime);
+
+            if(version !== gameVersion){
+                clearLights();
+                return;
+            }
+
+            pads[number].classList.remove("is-lit");
+
+            await sleep(gapTime);
+
+            if(version !== gameVersion) return;
+
+        }
+
+        acceptingInput = true;
+        enablePads(true);
+
+        status.textContent =
+            "光った順番に信号を押してください。";
+    }
+
+    // 全ラウンドクリア
+    function gameClear(){
+
+        acceptingInput = false;
+        enablePads(false);
+
+        status.textContent =
+            "信号の復元に成功しました！";
+
+        result.hidden = false;
+
+        startButton.disabled = false;
+        startButton.textContent = "PLAY AGAIN";
+    }
+
+    // 信号を押したとき
+    pads.forEach((pad, index) => {
+        pad.addEventListener("click", async() => {
+
+        if(!acceptingInput) return;
+
+        // 入力した信号が違う場合
+        if(index !== sequence[inputIndex]){
+
+            acceptingInput = false;
+            enablePads(false);
+
+            status.textContent =
+                "SIGNAL LOST... 信号が途切れました。";
+
+            startButton.disabled = false;
+            startButton.textContent = "RETRY";
+
+            return;
+        }
+
+        // 正解した信号を一瞬光らせる
+        pad.classList.add("is-lit");
+
+        setTimeout(() => {
+            pad.classList.remove("is-lit");
+        }, 180);
+
+        inputIndex++;
+
+        // まだ入力する信号が残っている
+        if(inputIndex < sequence.length) return;
+
+        acceptingInput = false;
+        enablePads(false);
+
+        // 最終ラウンド終了
+        if(round === maxRounds){
+            gameClear();
+            return;
+        }
+
+        // 次のラウンド
+        status.textContent =
+            "SIGNAL CONNECTED. 次の信号へ...";
+
+        const version = gameVersion;
+
+        await sleep(850);
+
+        if(version !== gameVersion) return;
+
+        round++;
+        playRound(version);
+    });
+});
+
+// CONNECTボタン
+startButton.addEventListener("click", () => {
+
+    gameVersion++;
+
+    round = 1;
+    inputIndex = 0;
+    sequence = [];
+    acceptingInput = false;
+
+    clearLights();
+    enablePads(false);
+
+    result.hidden = true;
+
+    startButton.disabled = true;
+    startButton.textContent = "CONNECTING...";
+
+    playRound(gameVersion);
+});
+
+// BONUS TRACKを閉じたときにリセット
+if (secret) {
+    secret.addEventListener("toggle", () => {
+
+        if (secret.open) return;
+
+        gameVersion++;
+        round = 0;
+        acceptingInput = false;
+
+        clearLights();
+        enablePads(false);
+
+        startButton.disabled = false;
+        startButton.textContent = "CONNECT";
+
+        progress.textContent = "ROUND 0 / 3";
+        status.textContent = "CONNECTを押して開始";
+
+        result.hidden = true;
+    });
+}
+
+})();
+</script>
+
 
 </body>
 </html>

@@ -2672,5 +2672,42 @@
 </script>
 
 
+<!-- =====================================
+     HOMEからゲーム企画の詳細を直接開く
+===================================== -->
+<script>
+(() => {
+
+    // URLからゲーム名を取得
+    const params = new URLSearchParams(
+        window.location.search
+    );
+
+    const game = params.get("game");
+
+    // ゲーム名と詳細ポップアップを対応させる
+    const gameDetails = {
+        "all-here": "all-here-detail",
+        "round-shift": "round-shift-detail",
+        "haunt-design": "haunt-design-detail"
+    };
+
+    const targetId = gameDetails[game];
+
+    if (!targetId) return;
+
+    const detail = document.getElementById(targetId);
+
+    if (!detail) return;
+
+    // 該当するゲームの詳細を自動表示
+    if (typeof detail.showPopover === "function") {
+        detail.showPopover();
+    }
+
+})();
+</script>
+
+
 </body>
 </html>

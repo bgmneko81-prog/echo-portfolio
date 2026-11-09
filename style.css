@@ -5597,16 +5597,16 @@ html{
    WORKS / GAME 作品情報の間隔調整
 ===================================== */
 
-/* ゲーム企画のタイトル　*/
-.mini-work-card[data-echo-genre="game"] h4{
+/* 全ジャンルタイトル　*/
+.mini-work-card h4{
     margin-top: 12px;
     margin-bottom: 4px;
     line-height: 1.5;
 }
 
 
-/* タイトルとVIEW DETAILSの間隔　*/
-.mini-work-card[data-echo-genre="game"] .mini-work-button::after{
+/* 全ジャンルタイトルとVIEW DETAILSの間隔　*/
+.mini-work-card .mini-work-button::after{
     margin-top: 0;
 }
 

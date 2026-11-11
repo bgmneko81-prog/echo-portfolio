@@ -12,6 +12,13 @@
 
 <body>
 
+    <!-- 前ページ共通 / ECHOロゴ-->
+    <a href="index.html"
+       class="echo-home-logo"
+       aria-label="ECHOのHOMEへ戻る">
+        ECHO<span>.</span>
+    </a>
+
     <nav class="site-nav" aria-label="メインナビゲーション">
 
         <a href="index.html">HOME</a>
@@ -27,8 +34,8 @@
     </nav>
 
     <!--　ECHO / PORTFOLIO　-->
-    <header class="works-hero echo-works-hero">
-
+    <header class="works-hero echo-works-hero" id="works-top">
+        
         <p class="works-hero-label">
             ECHO ARCHIVE / CREATIVE WORKS
         </p>
@@ -2161,9 +2168,23 @@
 
         </div>
 
+        <!-- WORKS / CONTACTへのリンク -->
+        <div class="works-contact-next">
+
+            <a href="contact.html">
+                → CONTACTを見る
+            </a>
+
+        </div>
 
     </main>
 
+    <!-- WORKS / TOPへ戻る -->
+    <a href="#works-top"
+       class="works-back-to-top"
+       aria-label="WORKSページのトップに戻る">
+          ↑ TOP
+    </a>
 
     <footer>
         <p>© 2026 ECHO.</p>
@@ -2671,7 +2692,6 @@
     })();
 </script>
 
-
 <!-- =====================================
      HOMEからゲーム企画の詳細を直接開く
 ===================================== -->
@@ -2707,6 +2727,30 @@
 
 })();
 </script>
+
+
+<!-- ECHOロゴ / スクロール時の表示切り替え -->
+<script>
+(() => {
+    const logo = document.querySelector(".echo-home-logo");
+
+    if (!logo) return;
+
+    const updateLogo = () => {
+        logo.classList.toggle(
+            "is-scrolled",
+            window.scrollY > 160
+        );
+    };
+
+    window.addEventListener("scroll", updateLogo, {
+        passive: true
+    });
+
+    updateLogo();
+})();
+</script>
+
 
 
 </body>

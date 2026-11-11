@@ -1823,36 +1823,6 @@ html{
 }
 
 
-/*　4ジャンルの色　*/
-.echo-colors{
-    display: flex;
-    gap:12px;
-    margin: 28px 0;
-}
-
-.echo-colors span{
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.echo-colors span:nth-child(1){
-    background: #65DDE0;
-}
-
-.echo-colors span:nth-child(2){
-    background: #BDA2FF;
-}
-
-.echo-colors span:nth-child(3){
-    background:#FF9EC8;
-}
-
-.echo-colors span:nth-child(4){
-    background:#FFD36F;
-}
-
-
 /*　ボタン　*/
 .echo-actions{
     display: flex;
@@ -5377,53 +5347,6 @@ html{
    HOME / INTERACTION GUIDE
 ===================================== */
 
-.echo-interaction-guide{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-
-    box-sizing: border-box;
-    max-width: 100%;
-
-    margin-top: 19px;
-    padding: 12px 15px;
-
-    background: #211C2B;
-    border: 1px solid #6F5267;
-    border-left: 3px solid #FF9EC8;
-    border-radius: 10px;
-
-    box-shadow: 0 8px 25px #00000020;
-}
-
-.echo-interaction-guide-label{
-    color: #FF9EC8;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.15em;
-}
-
-.echo-interaction-guide-text{
-    color: #F1EAF4;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.65;
-}
-
-.echo-interaction-guide-text > span{
-    color: #FF9EC8;
-    font-weight: 900;
-    padding-left: 3px;
-}
-
-
-/* 操作ガイドの下の余白　*/
-.echo-hero-copy .echo-tagline{
-    margin-top: 25px;
-}
-
-
 /* 作品ごとの枠色　*/
 .echo-stage .echo-card[data-work="record"]{
     border-color: #BDA2FF;
@@ -5435,24 +5358,6 @@ html{
 
 .echo-stage .echo-card[data-work="haunt-design"]{
     border-color: #AF88E8;
-}
-
-
-/* スマホ対応 */
-@media(max-width:720px){
-
-    .echo-interaction-guide{
-        margin-top: 17px;
-        padding: 11px 13px;
-    }
-
-    .echo-interaction-guide-text{
-        font-size: 11px;
-    }
-
-    .echo-hero-copy .echo-tagline{
-        margin-top: 21px;
-    }
 }
 
 
@@ -6165,3 +6070,358 @@ html{
     }
 
 }
+
+
+/* =====================================
+   WORKS / 詳細ページの閉じるボタン固定
+===================================== */
+
+.work-popover .work-popover-close{
+    position: sticky;
+    top: 12px;
+    z-index: 20;
+
+    display: block;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+
+    background: #1C1C25;
+    color: #FFFFFF;
+
+    border: 1px solid #F0ACC8;
+    border-radius: 50%;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 16px #00000066;
+}
+
+
+/* マウスを乗せたとき */
+.work-popover .work-popover-close:hover{
+    background: #F0ACC8;
+    color: #101116;
+}
+
+
+/* キーボード操作　*/
+.work-popover .work-popover-close:focus-visible{
+    outline: 3px solid #F0ACC8;
+    outline-offset: 3px;
+}
+
+
+/* =====================================
+   ECHO / FIXED HOME LOGO
+   全ページ共通
+===================================== */
+
+/* 左上のロゴ　*/
+.echo-home-logo{
+    position: fixed;
+
+    top: 20px;
+    left: 8%;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    z-index: 1001;
+
+    color: #F6F2F7;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -0.06em;
+    line-height: 1;
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ECHO.のドット */
+.echo-home-logo span{
+    color: #FF9EC8;
+}
+
+
+/* ホバー演出　*/
+.echo-home-logo:hover{
+    color: #FF9EC8;
+    transform: translateY(-3px);
+}
+
+
+/* キーボード操作　*/
+.echo-home-logo:focus-visible{
+    outline: 2px solid #65DDE0;
+    outline-offset: 5px;
+}
+
+
+/* スマホ版　*/
+@media(max-width: 720px){
+    
+    .echo-home-logo{
+        top: 12px;
+        left: 12px;
+        height: 40px;
+        font-size: 24px;
+    }
+
+    /* ナビゲーションを右へ寄せる */
+    .site-nav{
+        top: 12px;
+        left: 98px;
+        right: 10px;
+
+        padding: 6px 4px;
+        gap: 0;
+
+        justify-content: space-between;
+
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .site-nav::-webkit-scrollbar{
+        display: none;
+    }
+
+    .site-nav a{
+        flex-shrink: 0;
+        white-space: nowrap;
+
+        padding: 8px 4px;
+        font-size: clamp(9px, 2.3vw, 11px);
+    }
+}
+
+
+/* 動きを減らす　*/
+@media(prefers-reduced-motion: reduce){
+    .echo-home-logo{
+        transition: none;
+    }
+}
+
+
+/* スマホでもロゴとナビを横1列に保つ */
+@media (max-width: 720px) {
+    .site-nav {
+        flex-wrap: nowrap;
+    }
+}
+
+
+/* =====================================
+   WORKS / BACK TO TOP
+===================================== */
+
+.works-back-to-top{
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 900;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 66px;
+    height: 66px;
+
+    background: #1C1C25;
+    color: #FFFFFF;
+
+    border: 1px solid #F0ACC8;
+    border-radius: 50%;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+
+    box-shadow: 0 6px 24px #00000066;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ホバー時　*/
+.works-back-to-top:hover{
+    background: #F0ACC8;
+    color: #101116;
+    transform: translateY(-5px);
+}
+
+
+/* キーボード操作　*/
+.works-back-to-top:focus-visible{
+    outline: 2px solid #65DDE0;
+    outline-offset: 4px;
+}
+
+
+/* スマホ版　*/
+@media(max-width:720px){
+
+    .works-back-to-top{
+        right: 14px;
+        bottom: 18px;
+
+        width: 52px;
+        height: 52px;
+
+        font-size: 11px;
+    }
+}
+
+
+/* 動きを減らす設定 */
+@media(prefers-reduced-motion: reduce){
+    .works-back-to-top{
+        transition: none;
+    }
+}
+
+
+/* HOME / 整理後の余白 */
+.echo-hero-copy .echo-actions {
+    margin-top: 24px;
+}
+
+.echo-hero-copy .echo-tagline {
+    margin-top: 28px;
+}
+
+
+/* =====================================
+   WATCH THE MOVIE / 見出しと音声案内
+===================================== */
+
+/* 見出しと注意文を横並びに　*/
+.movie-heading-row{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 960px;
+    margin-bottom: 30px;
+}
+
+
+/* 見出しの余白を調整 */
+.movie-heading-row .movie-sound-note{
+    margin: 0;
+    color: #F0ACC8;
+    font-size: 13px;
+    white-space: nowrap;
+    text-align: right;
+}
+
+
+/* スマホ版　*/
+@media(max-width:720px){
+
+    .movie-heading-row{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .movie-heading-row .movie-sound-note{
+        font-size: 12px;
+        white-space: normal;
+        text-align: left;
+    }
+}
+
+
+/* =====================================
+   WORKS / CONTACTへのリンク
+===================================== */
+
+.works-contact-next{
+    margin-top: 90px;
+    padding-top: 60px;
+
+    border-top: 1px solid #45404B;
+}
+
+
+/*　リンク */
+.works-contact-next a{
+    display: inline-block;
+
+    color: #FF9EC8;
+    font-size: 16px;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+
+/* ホバー　*/
+.works-contact-next a:hover{
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+
+/* キーボード操作　*/
+.works-contact-next a:focus-visible{
+    outline: 2px solid #65DDE0;
+    outline-offset: 5px;
+}
+
+
+/* スマホ版　*/
+@media(max-width:720px){
+
+    .works-contact-next{
+        margin-top: 65px;
+        padding-top: 40px;
+    }
+}
+
+
+/* =====================================
+   ECHO LOGO / サイズ調整
+===================================== */
+
+@media (min-width: 721px) {
+
+    .echo-home-logo {
+        transition:
+            color 0.3s ease,
+            transform 0.35s ease,
+            opacity 0.35s ease,
+            font-size 0.35s ease;
+    }
+
+    /* ページ最上部だけ大きく */
+    .echo-home-logo:not(.is-scrolled) {
+        font-size: 38px;
+    }
+
+}
+
+/* 動きを減らす設定 */
+@media (prefers-reduced-motion: reduce) {
+    .echo-home-logo {
+        transition: none;
+    }
+}
+

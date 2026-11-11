@@ -13,6 +13,13 @@
 
 <body class="record-page">
 
+    <!-- 全ページ共通 / ECHOロゴ -->
+    <a href="index.html"
+       class="echo-home-logo"
+       aria-label="ECHOのHOMEへ戻る">
+        ECHO<span>.</span>
+    </a>
+
     <!--　サイト共通ナビゲーション　-->
     <nav class="site-nav" aria-label="メインナビゲーション">
 
@@ -58,7 +65,15 @@
         <!-- 作品動画　-->
          <section class="movie-section">
 
-            <h2>WATCH THE MOVIE</h2>
+            <div class="movie-heading-row">
+            
+                <h2>WATCH THE MOVIE</h2>
+
+                <p class="movie-sound-note">
+                    ♪ 再生ボタンを押すと音が出ます
+                </p>
+
+            </div>
 
             <div class="video-frame">
                 <iframe
@@ -69,10 +84,6 @@
                        allowfullscreen>
                 </iframe>
             </div>
-
-            <p class="movie-sound-note">
-                ♪ 再生ボタンを押すと音が出ます
-            </p>
 
          </section>
 
@@ -245,9 +256,39 @@
 
     </main>
 
+    <!-- ページトップへ戻るボタン -->
+    <a href="#"
+       class="works-back-to-top"
+       aria-label="ページのトップへ戻る">
+        ↑ TOP
+    </a>
+
     <footer>
         <p>© 2026 ECHO.</p>
     </footer>
+
+
+<!-- ECHOロゴ / スクロール時のサイズ切り替え -->
+<script>
+(() => {
+    const logo = document.querySelector(".echo-home-logo");
+
+    if (!logo) return;
+
+    const updateLogo = () => {
+        logo.classList.toggle(
+            "is-scrolled",
+            window.scrollY > 160
+        );
+    };
+
+    window.addEventListener("scroll", updateLogo, {
+        passive: true
+    });
+
+    updateLogo();
+})();
+</script>
 
 
 </body>

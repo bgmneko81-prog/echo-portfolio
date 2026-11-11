@@ -19,7 +19,7 @@
                class="echo-opening-skip"
                id="echo-opening-skip"
                type="button">
-               SKIP INTRO ↗ 
+               SKIP INTRO 
         </button>
 
         <div class="echo-opening-center">
@@ -42,6 +42,14 @@
         </div>
 
     </div>
+
+    <!-- 全ページ共通 / ECHOロゴ -->
+
+    <a href="index.html"
+       class="echo-home-logo"
+       aria-label="ECHOのHOMEへ戻る">
+        ECHO<span>.</span>
+    </a>
 
     <!--　サイト共通ナビゲーション　-->
     <nav class="site-nav" aria-label="メインナビゲーション">
@@ -94,20 +102,13 @@
                 生きた証が、誰かの記録に響く。
             </p>
 
-            <div class="echo-colors" aria-hidden="true">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
             <div class="echo-actions">
                 <a href="#works" class="echo-primary-btn">
-                    EXPLORE WORKS ↗
+                    EXPLORE WORKS
                 </a>
 
                 <a href="about.html" class="echo-secondary-btn">
-                    ABOUT ME ↗
+                    ABOUT ME
                 </a>
             </div>
 
@@ -117,22 +118,8 @@
                 </span>
 
                 <a id="echo-open-work" href="record.html">
-                    RE:CORDを見る ↗ 
+                    RE:CORDを見る 
                 </a>
-            </div>
-
-            <!-- ジャケット操作ガイド -->
-            <div class="echo-interaction-guide" role="note">
-
-                <span class="echo-interaction-guide-label">
-                    HOW TO PLAY / 01
-                </span>
-
-                <span class="echo-interaction-guide-text">
-                    小さなジャケットをクリックして、
-                    作品を切り替えよう。
-                </span>
-
             </div>
 
             <p class="echo-tagline">
@@ -158,7 +145,7 @@
             </a>
 
             <!--　サブ作品01　-->
-            <a href="works.html#all-works"
+            <a href="works.html?game=round-shift"
                class="echo-card echo-card-link"
                data-work="round-shift">
 
@@ -172,7 +159,7 @@
             </a>
 
             <!--　サブ作品02　-->
-            <a href="works.html#all-works"
+            <a href="works.html?game=haunt-design"
                class="echo-card echo-card-design"
                data-work="haunt-design">
 
@@ -294,7 +281,7 @@
                             <h3>全員そろってますか！？</h3>
                             <p>見下ろし型・校外学習引率シミュレーション</p>
                             <a href="works.html?game=all-here">
-                                ゲーム企画を見る ↗
+                                ゲーム企画を見る
                             </a>
                         </div>
                     </article>
@@ -311,7 +298,7 @@
                             <h3>ROUND SHIFT</h3>
                             <p>4vs4・ラウンド制戦術FPS</p>
                             <a href="works.html?game=round-shift">
-                                ゲーム企画を見る ↗
+                                ゲーム企画を見る
                             </a>
                         </div>
                     </article>
@@ -329,7 +316,7 @@
                             <h3>HAUNT DESIGN</h3>
                             <p>お化け屋敷制作・運営ホラー</p>
                             <a href="works.html?game=haunt-design">
-                                ゲーム企画を見る ↗
+                                ゲーム企画を見る 
                             </a>
                         </div>
                     </article>
@@ -530,13 +517,18 @@
 
            <!--　WORKS専用ページへのリンク　-->
            <a class="archive-link" href="works.html">
-              VIEW　ALL　WORKS
-              <span aria-hidden="true">↗</span>
+              VIEW ALL WORKS
            </a>
             
         </section>
     </main>
 
+    <!-- ページトップへ戻るボタン -->
+    <a href="#"
+       class="works-back-to-top"
+       aria-label="ページのトップへ戻る">
+        ↑ TOP
+    </a>
 
     <footer>
         <p>© 2026 ECHO.</p>
@@ -587,7 +579,7 @@
 
         label.textContent = "NOW SELECTED / " + work.genre;
 
-        openLink.textContent = work.title + "を見る ↗ "
+        openLink.textContent = work.title + "を見る "
         openLink.href = url;
 
         cards.forEach(card => {
@@ -1195,6 +1187,29 @@ if (secret) {
 
 })();
 </script>
+
+<!-- ECHOロゴ / スクロール時のサイズ切り替え -->
+<script>
+(() => {
+    const logo = document.querySelector(".echo-home-logo");
+
+    if (!logo) return;
+
+    const updateLogo = () => {
+        logo.classList.toggle(
+            "is-scrolled",
+            window.scrollY > 160
+        );
+    };
+
+    window.addEventListener("scroll", updateLogo, {
+        passive: true
+    });
+
+    updateLogo();
+})();
+</script>
+
 
 
 </body>

@@ -5,12 +5,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>PORTFOLIO | ECHO.</title>
+    <title>作品一覧・ゲーム企画・映像制作 | ECHO.</title>
+    <meta name="description" content="ゲーム企画・映像制作・Webデザインなどの自主制作作品を紹介するECHO.のポートフォリオ。">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="echo-favicon.png">
+    <link rel="shortcut icon" href="echo-favicon.ico">
 </head>
 
 
 <body>
+
+    <!-- 前ページ共通 / ECHOロゴ-->
+    <a href="index.html"
+       class="echo-home-logo"
+       aria-label="ECHOのHOMEへ戻る">
+        ECHO<span>.</span>
+    </a>
 
     <nav class="site-nav" aria-label="メインナビゲーション">
 
@@ -27,7 +37,7 @@
     </nav>
 
     <!--　ECHO / PORTFOLIO　-->
-    <header class="works-hero echo-works-hero">
+    <header class="works-hero echo-works-hero" id="works-top">
 
         <p class="works-hero-label">
             ECHO ARCHIVE / CREATIVE WORKS
@@ -2257,8 +2267,24 @@
         </div>
 
 
+        <!-- WORKS / CONTACTへのリンク -->
+        <div class="works-contact-next">
+
+            <a href="contact.html">
+                → CONTACTを見る
+            </a>
+
+        </div>
+
     </main>
 
+
+    <!-- WORKS / TOPへ戻る -->
+    <a href="#works-top"
+       class="works-back-to-top"
+       aria-label="WORKSページのトップに戻る">
+          ↑ TOP
+    </a>
 
     <footer>
         <p>© 2026 ECHO.</p>
@@ -2766,6 +2792,58 @@
     })();
 </script>
 
+
+<!-- =====================================
+     HOMEからゲーム企画の詳細を直接開く
+===================================== -->
+<script>
+(() => {
+
+    // URLからゲーム名を取得
+    const params = new URLSearchParams(
+        window.location.search
+    );
+
+    const game = params.get("game");
+
+    // ゲーム名と詳細ポップアップを対応させる
+    const gameDetails = {
+        "all-here": "all-here-detail",
+        "round-shift": "round-shift-detail",
+        "haunt-design": "haunt-design-detail"
+    };
+
+    const targetId = gameDetails[game];
+
+    if (!targetId) return;
+
+    const detail = document.getElementById(targetId);
+
+    if (!detail) return;
+
+    // 該当するゲームの詳細を自動表示
+    if (typeof detail.showPopover === "function") {
+        detail.showPopover();
+    }
+
+})();
+</script>
+
+
+<!-- ECHOロゴ / スクロール時のサイズ切り替え -->
+<script>
+(() => {
+    const logo = document.querySelector('.echo-home-logo');
+    if (!logo) return;
+
+    const updateLogo = () => {
+        logo.classList.toggle('is-scrolled', window.scrollY > 160);
+    };
+
+    window.addEventListener('scroll', updateLogo, { passive: true });
+    updateLogo();
+})();
+</script>
 
 </body>
 </html>

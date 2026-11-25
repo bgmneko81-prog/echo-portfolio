@@ -5,19 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>作品一覧・ゲーム企画・映像制作 | ECHO.</title>
+    <title>PORTFOLIO | ECHO.</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
-
-    <!-- 前ページ共通 / ECHOロゴ-->
-    <a href="index.html"
-       class="echo-home-logo"
-       aria-label="ECHOのHOMEへ戻る">
-        ECHO<span>.</span>
-    </a>
 
     <nav class="site-nav" aria-label="メインナビゲーション">
 
@@ -34,8 +27,8 @@
     </nav>
 
     <!--　ECHO / PORTFOLIO　-->
-    <header class="works-hero echo-works-hero" id="works-top">
-        
+    <header class="works-hero echo-works-hero">
+
         <p class="works-hero-label">
             ECHO ARCHIVE / CREATIVE WORKS
         </p>
@@ -769,6 +762,40 @@
 
                 <div class="mini-works-grid">
 
+                    <!-- RE:CORD / 公式サイト -->
+                    <article class="mini-work-card" data-echo-genre="design">
+
+                        <button
+                            type="button"
+                            class="mini-work-button"
+                            popovertarget="record-site-detail"
+                        >
+
+                            <div class="mini-work-frame record-site-frame">
+
+                                <img 
+                                    class="mini-work-art record-site-thumb"
+                                    src="https://bgmneko81-prog.github.io/record-official-site/assets/images/hero-reference.png"
+                                    alt="RE:CORD公式サイトのメインビジュアル"
+                                    loading="lazy"
+                                >
+
+                                <span class="record-site-tag">
+                                   OFFICIAL SITE
+                                </span>
+
+                            </div>
+
+                            <h4>RE:CORD ｜ ゲーム公式サイト</h4>
+
+                        </button>
+
+                        <p class="work-ai-note">
+                            オリジナルゲーム企画 / Webサイト制作
+                        </p>
+
+                    </article>
+
                     <!--　MIXTURE　DAYS　-->
                     <article class="mini-work-card" data-echo-genre="design">
 
@@ -805,6 +832,67 @@
             <!--　作品一覧の終了　-->
             
         </section>
+
+
+        <!-- RE:CORD公式サイト / 詳細ポップアップ -->
+        <div id="record-site-detail" class="work-popover" popover>
+
+            <button
+                type="button"
+                class="work-popover-close"
+                popovertarget="record-site-detail"
+                popovertargetaction="hide"
+                aria-label="閉じる"
+            >
+
+                ×
+            </button>
+
+            <p class="work-popover-label">
+                WEB DESIGN / GAME PROMOTION
+            </p>
+
+            <h2>RE:CORD 公式サイト</h2>
+
+            <h3>CONCEPT</h3>
+            <p>
+                自主制作ゲーム企画「RE:CORD」の世界観を
+                Web上でも体験できるように制作した
+                ゲーム公式サイト型のコンセプトサイト。
+
+                和風怪異ミステリーの雰囲気を伝えながら、
+                物語や登場人物、ゲームシステムへの
+                興味を深めてもらうことを目的とした。
+            </p>
+
+            <h3>CREATIVE POINT</h3>
+            <p>
+                作品のテーマである「記録」と「観測」を
+                サイト全体の演出と情報設計に反映。
+       
+                写世のカメラ体験や登場人物・怪異の切り替え、
+                隠された記録を開く演出などを取り入れ、
+                訪問者が自ら世界観を探索できる構成にした。
+            </p>
+
+            <h3>PRODUCTION</h3>
+            <p>
+                サイトの企画・構成・情報設計、
+                Webデザイン、HTML・CSS・JavaScriptによる
+                実装を担当。
+            </p>
+
+            <a
+               href="https://bgmneko81-prog.github.io/record-official-site/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="work-popover-link"
+            >
+               公式サイトを見る ↗
+            </a>
+
+        </div>
+
 
         <!--　東京紹介01　／　詳細ポップアップ　-->
         <div id="tokyo-01-detail" class="work-popover" popover>
@@ -2168,23 +2256,9 @@
 
         </div>
 
-        <!-- WORKS / CONTACTへのリンク -->
-        <div class="works-contact-next">
-
-            <a href="contact.html">
-                → CONTACTを見る
-            </a>
-
-        </div>
 
     </main>
 
-    <!-- WORKS / TOPへ戻る -->
-    <a href="#works-top"
-       class="works-back-to-top"
-       aria-label="WORKSページのトップに戻る">
-          ↑ TOP
-    </a>
 
     <footer>
         <p>© 2026 ECHO.</p>
@@ -2691,66 +2765,6 @@
 
     })();
 </script>
-
-<!-- =====================================
-     HOMEからゲーム企画の詳細を直接開く
-===================================== -->
-<script>
-(() => {
-
-    // URLからゲーム名を取得
-    const params = new URLSearchParams(
-        window.location.search
-    );
-
-    const game = params.get("game");
-
-    // ゲーム名と詳細ポップアップを対応させる
-    const gameDetails = {
-        "all-here": "all-here-detail",
-        "round-shift": "round-shift-detail",
-        "haunt-design": "haunt-design-detail"
-    };
-
-    const targetId = gameDetails[game];
-
-    if (!targetId) return;
-
-    const detail = document.getElementById(targetId);
-
-    if (!detail) return;
-
-    // 該当するゲームの詳細を自動表示
-    if (typeof detail.showPopover === "function") {
-        detail.showPopover();
-    }
-
-})();
-</script>
-
-
-<!-- ECHOロゴ / スクロール時の表示切り替え -->
-<script>
-(() => {
-    const logo = document.querySelector(".echo-home-logo");
-
-    if (!logo) return;
-
-    const updateLogo = () => {
-        logo.classList.toggle(
-            "is-scrolled",
-            window.scrollY > 160
-        );
-    };
-
-    window.addEventListener("scroll", updateLogo, {
-        passive: true
-    });
-
-    updateLogo();
-})();
-</script>
-
 
 
 </body>
